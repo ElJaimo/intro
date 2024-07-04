@@ -9,7 +9,10 @@ module.exports = {
         "base-purple": "var(--BASE-PURPLE)",
         "light-purple": "var(--LIGHT-PURPLE)",
         "lighter-purple": "var(--LIGHTER-PURPLE)",
-      }
+      },
+      fontFamily: {
+        "mono-main": ["Space Mono", "monospace"],
+      },
     },
   },
   plugins: [],

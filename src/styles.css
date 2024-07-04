@@ -3,11 +3,13 @@
 @tailwind components;
 @tailwind utilities; 
 
-/* RESET */
+/* RESET AND GLOBAL*/
 * {
+  box-sizing: border-box;
+  font-display: swap;
+  font-family: "Space Mono";
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
