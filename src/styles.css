@@ -9,3 +9,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --DARKER-PURPLE: #231942;
+  --DARK-PURPLE: #5E548E;
+  --BASE-PURPLE: #9F86C0;
+  --LIGHT-PURPLE: #BE95C4;
+  --LIGHTER-PURPLE: #E0B1CB;
+}
