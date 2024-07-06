@@ -14,6 +14,13 @@
         class="profile-photo"
       />
     </div>
-    <button></button>
+    <button class="scroll-button">
+      <span class="material-symbols-outlined text-2xl"> &#xe5db; </span>
+    </button>
+    <div class="grid grid-cols-3 absolute bottom-4 left-4 text-lighter-purple">
+      @for (item of networksLinks; track item.title) {
+        <button>{{ item.title }}</button>
+      }
+    </div>
   </div>
 </section>

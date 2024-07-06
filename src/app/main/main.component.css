@@ -1,3 +1,5 @@
+/* MAIN HERO */
+
 .main-hero {
   background-attachment: fixed;
   background-color: var(--DARK-BG);
@@ -32,6 +34,17 @@
   object-fit: cover;
   width: 10rem;
   height: 11rem;
+}
+
+.scroll-button {
+  align-items: center;
+  background-color: white;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  position: absolute;
+  @apply rounded-full w-12 h-12;
 }
 
 @media (min-width: 768px) {
