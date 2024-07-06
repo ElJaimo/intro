@@ -11,7 +11,7 @@ module.exports = {
         "lighter-purple": "var(--LIGHTER-PURPLE)",
       },
       fontFamily: {
-        "mono-main": ["Space Mono", "monospace"],
+        "mono-main": ["Space Mono", "monospace"]
       },
     },
   },
