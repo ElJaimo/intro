@@ -27,12 +27,15 @@
 }
 
 .type-out {
-  animation: blink 1s infinite, typing 2s steps(14, end) forwards;
   vertical-align: bottom;
   display: inline-block;
   overflow: hidden;
   border-right: 0.1em solid var(--BASE-PURPLE);
   max-width: fit-content;
+}
+
+.type-out.typing {
+  animation: blink 1s infinite, typing 2s steps(14, end) forwards;
 }
 
 @keyframes typing {

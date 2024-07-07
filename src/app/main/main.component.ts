@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
+
   networksLinks = [
     {
       id: 'linkedin',
@@ -37,6 +38,7 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.getElementById('type-out-content')?.classList.add('typing');
     setTimeout(() => (this.letter = 'e'), 1350);
   }
 }
