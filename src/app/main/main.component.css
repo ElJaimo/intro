@@ -47,6 +47,16 @@
   @apply rounded-full w-12 h-12;
 }
 
+.network-icon__main {
+  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
+    brightness(89%) contrast(91%);
+}
+
+.network-icon__main:hover {
+  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
+    brightness(89%) contrast(69%);
+}
+
 @media (min-width: 768px) {
   .intro-hero {
     left: 60%;

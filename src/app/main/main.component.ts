@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { link } from 'node:fs';
 
 @Component({
   selector: 'app-main',
@@ -10,21 +11,24 @@ export class MainComponent implements OnInit {
   networksLinks = [
     {
       id: 'linkedin',
-      icon: '',
       title: 'Linkedin',
-      link: '',
+      svg: '/assets/icons/linkedin-icon.svg',
+      classes: 'h-7',
+      link: 'https://www.linkedin.com/in/jaime-albarran-61933b17b',
     },
     {
       id: 'github',
-      icon: '',
       title: 'Github',
-      link: '',
+      svg: '/assets/icons/github-icon.svg',
+      classes: 'h-7',
+      link: 'https://github.com/ElJaimo',
     },
     {
       id: 'mail',
-      icon: '',
       title: 'Mail me',
-      link: '',
+      svg: '/assets/icons/mail-icon.svg',
+      classes: 'h-6',
+      link: 'mailto:hawk_1036@live.com.mx',
     },
   ];
   constructor() {}

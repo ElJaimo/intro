@@ -17,9 +17,17 @@
     <button class="scroll-button">
       <span class="material-symbols-outlined text-2xl"> &#xe5db; </span>
     </button>
-    <div class="grid grid-cols-3 absolute bottom-4 left-4 text-lighter-purple">
-      @for (item of networksLinks; track item.title) {
-        <button>{{ item.title }}</button>
+    <div class="grid grid-cols-3 gap-2 absolute top-4 left-4">
+      @for (network of networksLinks; track network.title) {
+      <a [href]="network.link" target="_blank">
+        <img
+          [src]="network.svg"
+          [alt]="network.id"
+          [title]="network.title"
+          [class]="network.classes"
+          class="network-icon__main"
+        />
+      </a>
       }
     </div>
   </div>
