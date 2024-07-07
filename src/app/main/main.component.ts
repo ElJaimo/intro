@@ -37,6 +37,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => (this.letter = 'e'), 1200);
+    setTimeout(() => (this.letter = 'e'), 1350);
   }
 }
