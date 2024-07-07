@@ -58,3 +58,14 @@
   filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
     brightness(89%) contrast(69%);
 }
+
+/* NAVBAR */
+
+.navbar-container {
+  position: sticky;
+  width: 96vw;
+  background-color: white;
+  opacity: 0.5;
+  min-height: 3rem;
+  @apply rounded-md;
+}

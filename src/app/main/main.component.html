@@ -14,11 +14,6 @@
         class="profile-photo"
       />
     </div>
-    <button class="scroll-button">
-      <span class="material-symbols-outlined text-2xl animate-pulse">
-        &#xe5db;
-      </span>
-    </button>
     <div class="grid grid-cols-3 items-end gap-2 absolute top-4 left-4">
       @for (network of networksLinks; track network.title) {
       <img
@@ -31,5 +26,15 @@
       />
       }
     </div>
+    <button class="scroll-button">
+      <span class="material-symbols-outlined text-2xl animate-pulse">
+        &#xe5db;
+      </span>
+    </button>
   </div>
 </section>
+<div id="page-container" class="min-h-screen bg-slate-900">
+  <nav id="navbar" class="navbar-container">
+    <img src="/assets/logos/jaimos-logo.png" alt="" class="w-5" />
+  </nav>
+</div>
