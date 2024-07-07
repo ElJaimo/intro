@@ -26,6 +26,42 @@
   @apply md:flex gap-8 md:gap-10 absolute;
 }
 
+.type-out {
+  animation: blink 1s infinite, typing 2s steps(14, end) forwards;
+  vertical-align: bottom;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.1em solid var(--BASE-PURPLE);
+  max-width: fit-content;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  40% {
+    width: 100%;
+  }
+  50% {
+    width: 43%;
+  }
+  60% {
+    width: 43%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: var(--BASE-PURPLE);
+  }
+}
+
 .profile-photo {
   border-radius: 50%;
   object-fit: cover;
@@ -50,6 +86,7 @@
 
 .network-icon__main {
   cursor: pointer;
+  transition: all 0.5s ease;
   filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
     brightness(89%) contrast(91%);
 }

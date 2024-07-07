@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { link } from 'node:fs';
 
 @Component({
   selector: 'app-main',
@@ -31,10 +30,13 @@ export class MainComponent implements OnInit {
       link: 'mailto:hawk_1036@live.com.mx',
     },
   ];
+  letter = 'o';
 
   goToLink(url: string): void {
     window.open(url, '_blank');
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => (this.letter = 'e'), 1200);
+  }
 }
