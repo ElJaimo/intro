@@ -12,10 +12,7 @@
 }
 
 .color-hero {
-  align-items: end;
   background-color: rgb(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
   position: relative;
   @apply w-full h-full;
 }
@@ -23,8 +20,8 @@
 .intro-hero {
   -ms-transform: translate(-50%, -50%);
   font-family: "Source Code Pro", monospace;
-  left: 50%;
-  top: 50%;
+  left: 60%;
+  top: 45%;
   transform: translate(-50%, -50%);
   @apply md:flex gap-8 md:gap-10 absolute;
 }
@@ -37,17 +34,22 @@
 }
 
 .scroll-button {
+  -ms-transform: translate(-50%, -50%);
   align-items: center;
   background-color: white;
-  bottom: 1rem;
+  bottom: 0.5rem;
   display: flex;
   justify-content: center;
-  opacity: 0.5;
+  left: 50%;
+  opacity: 0.4;
   position: absolute;
-  @apply rounded-full w-12 h-12;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s;
+  @apply rounded-full w-12 h-12 hover:bottom-3;
 }
 
 .network-icon__main {
+  cursor: pointer;
   filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
     brightness(89%) contrast(91%);
 }
@@ -55,11 +57,4 @@
 .network-icon__main:hover {
   filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
     brightness(89%) contrast(69%);
-}
-
-@media (min-width: 768px) {
-  .intro-hero {
-    left: 60%;
-    top: 45%;
-  }
 }

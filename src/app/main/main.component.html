@@ -1,12 +1,12 @@
 <section id="main-hero" class="main-hero">
   <div class="color-hero">
     <div class="intro-hero">
-      <div class="text-center md:text-right">
-        <p class="text-3xl lg:text-5xl text-lighter-purple mb-4 leading-tight">
+      <div class="text-right">
+        <p class="text-5xl text-lighter-purple mb-4 leading-tight">
           Hello there, <br />
           I'm &lt;Jaime&gt;
         </p>
-        <p class="text-lg lg:text-xl text-light-purple">A Web Developer</p>
+        <p class="text-xl text-light-purple">A Web Developer</p>
       </div>
       <img
         src="./assets/images/profile-photo.jpg"
@@ -15,19 +15,20 @@
       />
     </div>
     <button class="scroll-button">
-      <span class="material-symbols-outlined text-2xl"> &#xe5db; </span>
+      <span class="material-symbols-outlined text-2xl animate-pulse">
+        &#xe5db;
+      </span>
     </button>
-    <div class="grid grid-cols-3 gap-2 absolute top-4 left-4">
+    <div class="grid grid-cols-3 items-end gap-2 absolute top-4 left-4">
       @for (network of networksLinks; track network.title) {
-      <a [href]="network.link" target="_blank">
-        <img
-          [src]="network.svg"
-          [alt]="network.id"
-          [title]="network.title"
-          [class]="network.classes"
-          class="network-icon__main"
-        />
-      </a>
+      <img
+        [src]="network.svg"
+        [alt]="network.id"
+        [title]="network.title"
+        (click)="goToLink(network.link)"
+        [class]="network.classes"
+        class="network-icon__main"
+      />
       }
     </div>
   </div>

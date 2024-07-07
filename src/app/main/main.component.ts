@@ -31,7 +31,10 @@ export class MainComponent implements OnInit {
       link: 'mailto:hawk_1036@live.com.mx',
     },
   ];
-  constructor() {}
+
+  goToLink(url: string): void {
+    window.open(url, '_blank');
+  }
 
   ngOnInit() {}
 }
