@@ -10,8 +10,15 @@ module.exports = {
         "light-purple": "var(--LIGHT-PURPLE)",
         "lighter-purple": "var(--LIGHTER-PURPLE)",
       },
+      colors: {
+        "darker-purple": "var(--DARKER-PURPLE)",
+        "dark-purple": "var(--DARK-PURPLE)",
+        "base-purple": "var(--BASE-PURPLE)",
+        "light-purple": "var(--LIGHT-PURPLE)",
+        "lighter-purple": "var(--LIGHTER-PURPLE)",
+      },
       fontFamily: {
-        "mono-main": ["Space Mono", "monospace"]
+        "mono-main": ["Space Mono", "monospace"],
       },
     },
   },
