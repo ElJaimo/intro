@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   standalone: true,
+  imports: [NgClass],
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-
   networksLinks = [
     {
       id: 'linkedin',
@@ -32,9 +33,10 @@ export class MainComponent implements OnInit {
     },
   ];
   letter = 'o';
+  /* showNetworks = false; */
 
-  goToLink(url: string): void {
-    window.open(url, '_blank');
+  goToLink(url: string, newPage = true): void {
+    window.open(url, newPage ? '_blank' : '_self');
   }
 
   ngOnInit() {
