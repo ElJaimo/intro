@@ -1,8 +1,7 @@
 /* MAIN HERO */
 
-.main-hero__main {
-  background-attachment: fixed;
-  background-color: var(--DARK-BG);
+.section-container__main {
+  background-color: var(--DARKER-PURPLE);
   background-image: url(/assets/images/background-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +10,7 @@
   width: 100vw;
 }
 
-.color-hero__main {
+.color-container__main {
   background-color: rgb(0, 0, 0, 0.4);
   position: relative;
   @apply w-full h-full;
@@ -94,7 +93,8 @@
     brightness(89%) contrast(91%);
 }
 
-.network-icon__main:hover {
+.network-icon__main:hover,
+.network-icon__main:focus {
   filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
     brightness(89%) contrast(69%);
 }
@@ -103,14 +103,17 @@
 
 .navbar-container__navbar {
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(230, 230, 230, 0.6);
+  border: 1px rgb(200, 200, 200) solid;
   display: flex;
   height: 5rem;
   justify-content: space-between;
-  position: sticky;
+  position: absolute;
   top: 1rem;
-  width: 96vw;
-  @apply pl-4 pr-8 py-1 rounded-2xl mx-auto;
+  left: 50%;
+  width: 96%;
+  transform: translateX(-50%);
+  @apply pl-4 pr-8 py-1 rounded-3xl mx-auto;
 }
 
 .nav-link__navbar {
@@ -124,26 +127,29 @@
 }
 
 .nav-link__navbar::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   bottom: -4px;
   right: 0;
   transform: scaleX(0);
   background-color: var(--DARKER-PURPLE);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   transform-origin: top right;
 }
 
-.nav-link__navbar:hover::before {
+.nav-link__navbar:hover::before,
+.nav-link__navbar:focus::before {
   transform-origin: top left;
   transform: scaleX(1);
 }
 
-/* .contact-link__navbar {
-  border-color: var(--DARKER-PURPLE);
+/* MAYBE DELETE */
+.contact-link__navbar {
+  color: var(--DARK-PURPLE);
+  border-color: var(--DARK-PURPLE);
   border-width: 2px;
   border-radius: 1rem;
   transition: all 0.5s ease;
@@ -172,4 +178,25 @@
   filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
     brightness(89%) contrast(69%);
 }
- */
+
+/* ABOUT ME */
+
+.section-container__about {
+  align-items: center;
+  background-attachment: fixed;
+  background-color: var(--DARKER-PURPLE);
+  /* background-image: url(/assets/images/background-3.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 200vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.color-container__about {
+  background-color: rgb(0, 0, 0, 0.4);
+  position: relative;
+  @apply w-full h-full;
+}

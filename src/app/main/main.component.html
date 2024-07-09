@@ -1,5 +1,5 @@
-<section id="main-hero" class="main-hero__main">
-  <div class="color-hero__main">
+<section id="main-hero" class="section-container__main">
+  <div class="color-container__main">
     <div class="intro-hero__main">
       <div class="text-right">
         <p class="text-5xl text-lighter-purple mb-4 leading-tight">
@@ -37,36 +37,42 @@
     </button>
   </div>
 </section>
-<div id="page-container" class="min-h-screen bg-slate-900 pt-4">
-  <nav id="navbar" class="navbar-container__navbar">
-    <img
-      src="/assets/logos/jaimos-logo.png"
-      alt=""
-      class="h-full cursor-pointer hover:brightness-125 transition-all duration-500"
-      (click)="goToLink('', false)"
-    />
-    <div class="h-fit flex gap-10 text-xl items-center">
-      <a href="" class="nav-link__navbar">Skills</a>
-      <a href="" class="nav-link__navbar">Courses</a>
-      <a href="" class="nav-link__navbar">Projects</a>
-      <!-- <button
-        (mouseenter)="showNetworks = true"
-        (mouseleave)="showNetworks = false"
-        class="contact-link__navbar"
-        [ngClass]="showNetworks == true ? 'active' : 'inactive'"
-      >
-        @if (showNetworks) { @for (network of networksLinks; track
-        network.title) {
-        <img
-          [src]="network.svg"
-          [alt]="network.id"
-          [title]="network.title"
-          (click)="goToLink(network.link)"
-          [class]="network.classes"
-          class="network-icon__navbar"
-        />
-        } } @else { Contact }
-      </button> -->
-    </div>
-  </nav>
+<div id="page-container">
+  <div class="sticky top-0 z-10">
+    <nav id="navbar" class="navbar-container__navbar">
+      <img
+        src="/assets/logos/jaimos-logo.png"
+        alt=""
+        class="h-full cursor-pointer hover:brightness-125 transition-all duration-500"
+        (click)="goToLink('', false)"
+      />
+      <div class="h-fit flex gap-10 text-xl items-center">
+        <a href="" class="nav-link__navbar">Skills</a>
+        <a href="" class="nav-link__navbar">Courses</a>
+        <a href="" class="nav-link__navbar">Projects</a>
+        <button
+          id="maybeDelete"
+          (mouseenter)="showNetworks = true"
+          (mouseleave)="showNetworks = false"
+          class="contact-link__navbar"
+          [ngClass]="showNetworks == true ? 'active' : 'inactive'"
+        >
+          @if (showNetworks) { @for (network of networksLinks; track
+          network.title) {
+          <img
+            [src]="network.svg"
+            [alt]="network.id"
+            [title]="network.title"
+            (click)="goToLink(network.link)"
+            [class]="network.classes"
+            class="network-icon__navbar"
+          />
+          } } @else { Contact }
+        </button>
+      </div>
+    </nav>
+  </div>
+  <section id="aboutMe" class="section-container__about">
+    <div class="color-container__about"></div>
+  </section>
 </div>

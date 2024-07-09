@@ -33,7 +33,7 @@ export class MainComponent implements OnInit {
     },
   ];
   letter = 'o';
-  /* showNetworks = false; */
+  showNetworks = false;
 
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');
