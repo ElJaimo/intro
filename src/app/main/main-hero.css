@@ -1,0 +1,98 @@
+.section-container__main {
+  background-color: var(--DARKER-PURPLE);
+  background-image: url(/assets/images/background-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.color-container__main {
+  background-color: rgb(0, 0, 0, 0.4);
+  position: relative;
+  @apply w-full h-full;
+}
+
+.intro-hero__main {
+  -ms-transform: translate(-50%, -50%);
+  font-family: "Source Code Pro", monospace;
+  left: 60%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  @apply md:flex gap-8 md:gap-10 absolute;
+}
+
+.type-out__main {
+  vertical-align: bottom;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.1em solid var(--BASE-PURPLE);
+  max-width: fit-content;
+}
+
+.type-out__main.typing {
+  animation: blink 1s infinite, typing 2s steps(14, end) forwards;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  40% {
+    width: 100%;
+  }
+  50% {
+    width: 43%;
+  }
+  70% {
+    width: 43%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: var(--BASE-PURPLE);
+  }
+}
+
+.profile-photo__main {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 10rem;
+  height: 11rem;
+}
+
+.scroll-button__main {
+  -ms-transform: translate(-50%, -50%);
+  align-items: center;
+  background-color: white;
+  bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  opacity: 0.4;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s;
+  @apply rounded-full w-12 h-12 hover:bottom-3;
+}
+
+.network-icon__main {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
+    brightness(89%) contrast(91%);
+}
+
+.network-icon__main:hover,
+.network-icon__main:focus {
+  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
+    brightness(89%) contrast(69%);
+}

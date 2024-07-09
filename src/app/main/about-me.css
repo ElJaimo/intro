@@ -1,0 +1,19 @@
+.section-container__about {
+  align-items: center;
+  background-attachment: fixed;
+  background-color: var(--DARKER-PURPLE);
+  /* background-image: url(/assets/images/background-3.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 200vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.color-container__about {
+  background-color: rgb(0, 0, 0, 0.4);
+  position: relative;
+  @apply w-full h-full;
+}

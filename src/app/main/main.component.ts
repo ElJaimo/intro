@@ -6,7 +6,11 @@ import { NgClass } from '@angular/common';
   templateUrl: './main.component.html',
   standalone: true,
   imports: [NgClass],
-  styleUrls: ['./main.component.css'],
+  styleUrls: [
+    './main-hero.css',
+    './navbar.css',
+    'about-me.css',
+  ],
 })
 export class MainComponent implements OnInit {
   networksLinks = [

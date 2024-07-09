@@ -1,0 +1,77 @@
+.navbar-container__navbar {
+  align-items: center;
+  background-color: rgba(230, 230, 230, 0.6);
+  border: 1px rgb(200, 200, 200) solid;
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 96%;
+  transform: translateX(-50%);
+  @apply pl-4 pr-8 py-1 rounded-3xl mx-auto;
+}
+
+.nav-link__navbar {
+  color: var(--DARK-PURPLE);
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.nav-link__navbar:hover {
+  color: var(--DARKER-PURPLE);
+}
+
+.nav-link__navbar::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  bottom: -4px;
+  right: 0;
+  transform: scaleX(0);
+  background-color: var(--DARKER-PURPLE);
+  transition: transform 0.3s ease;
+  transform-origin: top right;
+}
+
+.nav-link__navbar:hover::before,
+.nav-link__navbar:focus::before {
+  transform-origin: top left;
+  transform: scaleX(1);
+}
+
+/* MAYBE DELETE */
+.contact-link__navbar {
+  color: var(--DARK-PURPLE);
+  border-color: var(--DARK-PURPLE);
+  border-width: 2px;
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+  display: flex;
+  @apply gap-4;
+}
+
+.contact-link__navbar.active {
+  background-color: rgb(255, 255, 255, 0.6);
+  @apply px-5 py-2;
+}
+
+.contact-link__navbar.inactive {
+  background-color: none;
+  @apply px-3 py-1;
+}
+
+.network-icon__navbar {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
+    brightness(89%) contrast(91%);
+}
+
+.network-icon__navbar:hover {
+  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
+    brightness(89%) contrast(69%);
+}
