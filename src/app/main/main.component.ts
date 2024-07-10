@@ -7,10 +7,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   templateUrl: './main.component.html',
   standalone: true,
   imports: [NgClass, NavbarComponent],
-  styleUrls: [
-    './main-hero.css',
-    'about-me.css',
-  ],
+  styleUrls: ['./main-hero.css', 'about-me.css', 'skills.css'],
 })
 export class MainComponent implements OnInit {
   networksLinks = [
@@ -35,6 +32,21 @@ export class MainComponent implements OnInit {
       classes: 'h-6',
       link: 'mailto:hawk_1036@live.com.mx',
     },
+  ];
+  skills = [
+    'Typescript',
+    'Javascript',
+    'Angular',
+    'Vue.js',
+    'React',
+    'UI/UX',
+    'AWS',
+    'Git',
+    'Figma',
+    'Bootstrap',
+    'Tailwind',
+    'Python',
+    'SQL',
   ];
   letter = 'o';
 

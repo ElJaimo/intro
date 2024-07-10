@@ -1,0 +1,17 @@
+.section-container__skills {
+  background-color: var(--LIGHT-BG);
+}
+
+.skill-item {
+  cursor: default;
+  color: var(--DARKER-PURPLE);
+  border: 2px var(--DARKER-PURPLE) solid;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  @apply rounded-full px-4;
+}
+
+.skill-item:hover, .skill-item:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 10px rgb(0, 0, 0, 0.3);
+}

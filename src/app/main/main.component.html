@@ -51,13 +51,30 @@
           title="about-me"
         />
         <div class="max-w-72">
-          <h2 class="text-lighter-purple mb-4">A little about me</h2>
-          <p class="text-light-purple mb-4">
+          <h2 class="text-lighter-purple mb-5">A little about me</h2>
+          <p class="text-light-purple mb-5">
             Heard they are reforming the Dawnguard. Vampire hunters or something
             in the old fort near Riften. Might consider joining up myself.
           </p>
           <button class="link-button px-7 text-lg">Resume</button>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-container__skills text-center">
+    <div class="inline-block max-w-2xl px-5 my-20">
+      <h2 class="text-darker-purple mb-10">
+        Looking for a developer? <br />
+        I might suit you
+      </h2>
+      <p class="text-dark-purple mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="flex flex-wrap gap-x-8 gap-y-6 justify-center">
+        @for (skill of skills; track $index) {
+        <p class="skill-item">{{ skill }}</p>
+        }
       </div>
     </div>
   </section>
