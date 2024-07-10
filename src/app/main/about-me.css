@@ -1,19 +1,31 @@
 .section-container__about {
-  align-items: center;
+  /* background-image: url(/assets/images/background-3.jpg); */
   background-attachment: fixed;
   background-color: var(--DARKER-PURPLE);
-  /* background-image: url(/assets/images/background-3.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  height: 200vh;
-  justify-content: center;
+  height: 100vh;
   width: 100vw;
 }
 
 .color-container__about {
+  align-items: center;
   background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
   position: relative;
   @apply w-full h-full;
+}
+
+.about-me-photo__about {
+  width: 250px;
+  height: 220px;
+  object-position: 50% 65%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px var(--LIGHTER-PURPLE) dashed;
+  outline-offset: 15px;
+  margin: 20px;
+  outline: 5px var(--DARK-PURPLE) solid;
 }

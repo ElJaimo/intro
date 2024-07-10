@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  @apply text-2xl;
+}
+
 :root {
   --DARKER-PURPLE: #231942;
   --DARK-PURPLE: #5e548e;

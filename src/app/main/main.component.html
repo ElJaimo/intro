@@ -2,14 +2,14 @@
   <div class="color-container__main">
     <div class="intro-hero__main">
       <div class="text-right">
-        <p class="text-5xl text-lighter-purple mb-4 leading-tight">
+        <h1 class="text-5xl text-lighter-purple mb-4 leading-tight">
           Hello there, <br />
           I'm
           <span id="type-out-content" class="type-out__main"
             >&lt;Jaim<span>{{ letter }}</span
             >&gt;</span
           >
-        </p>
+        </h1>
         <p class="text-xl text-light-purple">A Web Developer</p>
       </div>
       <img
@@ -42,6 +42,22 @@
     <app-navbar id="navbar"></app-navbar>
   </div>
   <section id="aboutMe" class="section-container__about">
-    <div class="color-container__about"></div>
+    <div class="color-container__about">
+      <div class="flex gap-8">
+        <img
+          class="about-me-photo__about"
+          src=".\assets\images\about-me-photo.jpg"
+          alt=""
+        />
+        <div class="max-w-72">
+          <h2 class="text-lighter-purple mb-4">A little about me</h2>
+          <p class="text-light-purple mb-4">
+            Heard they are reforming the Dawnguard. Vampire hunters or something
+            in the old fort near Riften. Might consider joining up myself.
+          </p>
+          <button>Resume</button>
+        </div>
+      </div>
+    </div>
   </section>
 </div>

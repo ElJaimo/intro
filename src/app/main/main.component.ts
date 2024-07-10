@@ -9,7 +9,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
   imports: [NgClass, NavbarComponent],
   styleUrls: [
     './main-hero.css',
-    './navbar.css',
     'about-me.css',
   ],
 })

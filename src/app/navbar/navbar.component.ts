@@ -14,7 +14,5 @@ export class NavbarComponent implements OnInit {
     window.open(url, newPage ? '_blank' : '_self');
   }
 
-  constructor() {}
-
   ngOnInit() {}
 }
