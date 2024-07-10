@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NavbarComponent],
   styleUrls: [
     './main-hero.css',
     './navbar.css',
@@ -37,7 +38,6 @@ export class MainComponent implements OnInit {
     },
   ];
   letter = 'o';
-  showNetworks = false;
 
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');

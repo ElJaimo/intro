@@ -39,38 +39,7 @@
 </section>
 <div id="page-container">
   <div class="sticky top-0 z-10">
-    <nav id="navbar" class="navbar-container__navbar">
-      <img
-        src="/assets/logos/jaimos-logo.png"
-        alt=""
-        class="h-full cursor-pointer hover:brightness-125 transition-all duration-500"
-        (click)="goToLink('', false)"
-      />
-      <div class="h-fit flex gap-10 text-xl items-center">
-        <a href="" class="nav-link__navbar">Skills</a>
-        <a href="" class="nav-link__navbar">Courses</a>
-        <a href="" class="nav-link__navbar">Projects</a>
-        <button
-          id="maybeDelete"
-          (mouseenter)="showNetworks = true"
-          (mouseleave)="showNetworks = false"
-          class="contact-link__navbar"
-          [ngClass]="showNetworks == true ? 'active' : 'inactive'"
-        >
-          @if (showNetworks) { @for (network of networksLinks; track
-          network.title) {
-          <img
-            [src]="network.svg"
-            [alt]="network.id"
-            [title]="network.title"
-            (click)="goToLink(network.link)"
-            [class]="network.classes"
-            class="network-icon__navbar"
-          />
-          } } @else { Contact }
-        </button>
-      </div>
-    </nav>
+    <app-navbar id="navbar"></app-navbar>
   </div>
   <section id="aboutMe" class="section-container__about">
     <div class="color-container__about"></div>

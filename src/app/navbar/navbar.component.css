@@ -42,36 +42,3 @@
   transform-origin: top left;
   transform: scaleX(1);
 }
-
-/* MAYBE DELETE */
-.contact-link__navbar {
-  color: var(--DARK-PURPLE);
-  border-color: var(--DARK-PURPLE);
-  border-width: 2px;
-  border-radius: 1rem;
-  transition: all 0.5s ease;
-  display: flex;
-  @apply gap-4;
-}
-
-.contact-link__navbar.active {
-  background-color: rgb(255, 255, 255, 0.6);
-  @apply px-5 py-2;
-}
-
-.contact-link__navbar.inactive {
-  background-color: none;
-  @apply px-3 py-1;
-}
-
-.network-icon__navbar {
-  cursor: pointer;
-  transition: all 0.5s ease;
-  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
-    brightness(89%) contrast(91%);
-}
-
-.network-icon__navbar:hover {
-  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
-    brightness(89%) contrast(69%);
-}
