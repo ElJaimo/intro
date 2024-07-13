@@ -12,7 +12,49 @@
   @apply rounded-full px-4;
 }
 
-.skill-item:hover, .skill-item:focus {
+.skill-item:hover,
+.skill-item:focus {
   transform: translateY(-3px);
   box-shadow: 0 8px 10px rgb(0, 0, 0, 0.3);
+}
+
+.skills-container {
+  position: relative;
+  @apply h-40;
+}
+
+.skills-container.first::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: calc(100% + 2px);
+  right: 0;
+  border-width: 0 2px 2px 0;
+  border-color: var(--LIGHT-PURPLE);
+  @apply rounded-br-2xl;
+}
+
+.skills-container.left::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: calc(100% + 2px);
+  left: 0;
+  border-width: 2px 0 2px 2px;
+  border-color: var(--LIGHT-PURPLE);
+  @apply rounded-l-2xl;
+}
+
+.skills-container.right::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: calc(100% + 2px);
+  right: 0;
+  border-width: 2px 2px 2px 0;
+  border-color: var(--LIGHT-PURPLE);
+  @apply rounded-r-2xl;
 }

@@ -47,11 +47,13 @@ button.link-button::before {
   transition: transform 0.5s;
 }
 
-button.link-button:hover {
+button.link-button:hover,
+button.link-button:focus {
   color: var(--DARKER-PURPLE);
 }
 
-button.link-button:hover:before {
+button.link-button:hover:before,
+button.link-button:focus:before {
   transform: translateX(0) skewX(-45deg);
 }
 
