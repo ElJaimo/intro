@@ -7,7 +7,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   templateUrl: './main.component.html',
   standalone: true,
   imports: [NgClass, NavbarComponent],
-  styleUrls: ['./main-hero.css', 'about-me.css', 'skills.css'],
+  styleUrls: ['./main-hero.css', 'about-me.css', 'skills.css', 'courses.css'],
 })
 export class MainComponent implements OnInit {
   networksLinks = [

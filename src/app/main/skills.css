@@ -1,5 +1,6 @@
 .section-container__skills {
   background-color: var(--LIGHT-BG);
+  @apply py-20;
 }
 
 .skill-item {
