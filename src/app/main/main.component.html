@@ -86,11 +86,78 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div>
-          <div class="skills-container first">
-            
+          <div class="courses-container first">
+            @for (course of courses.slice(0,3); track $index) {
+            <div class="flex gap-x-4 flex-row-reverse">
+              <figure>
+                <img
+                  [src]="'/assets/icons/' + course.icon"
+                  [alt]="course.title"
+                  class="w-20"
+                />
+              </figure>
+              <div class="text-right">
+                <h3 class="text-lighter-purple">
+                  {{ course.title }}
+                </h3>
+                <p class="text-light-purple">
+                  {{ course.date }}
+                </p>
+                <p class="text-light-purple">
+                  {{ course.source }}
+                </p>
+              </div>
+            </div>
+            }
           </div>
-          <div class="skills-container left"></div>
-          <div class="skills-container right"></div>
+          <div class="courses-container left">
+            @for (course of courses.slice(3,6); track $index) {
+            <div class="flex gap-x-4">
+              <figure>
+                <img
+                  [src]="'/assets/icons/' + course.icon"
+                  [alt]="course.title"
+                  class="w-20"
+                />
+              </figure>
+              <div class="">
+                <h3 class="text-lighter-purple">
+                  {{ course.title }}
+                </h3>
+                <p class="text-light-purple">
+                  {{ course.date }}
+                </p>
+                <p class="text-light-purple">
+                  {{ course.source }}
+                </p>
+              </div>
+            </div>
+            }
+          </div>
+          <div class="courses-container right">
+            @for (course of courses.slice(-1); track $index) {
+            <div class="flex gap-x-4 flex-row-reverse">
+              <figure>
+                <img
+                  [src]="'/assets/icons/' + course.icon"
+                  [alt]="course.title"
+                  class="w-20"
+                />
+              </figure>
+              <div class="text-right">
+                <h3 class="text-lighter-purple">
+                  {{ course.title }}
+                </h3>
+                <p class="text-light-purple">
+                  {{ course.date }}
+                </p>
+                <p class="text-light-purple">
+                  {{ course.source }}
+                </p>
+              </div>
+            </div>
+            }
+          </div>
         </div>
       </div>
     </div>

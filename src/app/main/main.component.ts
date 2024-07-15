@@ -92,6 +92,13 @@ export class MainComponent implements OnInit {
       icon: 'bootstrap-icon.png',
       link: 'https://coursera.org/share/06b5bfd3e9a80f17ad0cce8e3264e345',
     },
+    {
+      title: 'Getting Started with Git and GitHub',
+      date: 'Jul, 2024',
+      source: 'IBM',
+      icon: 'git-icon.png',
+      link: 'https://coursera.org/share/395b93f5624677d13070fffd63661de5',
+    },
   ];
 
   goToLink(url: string, newPage = true): void {
