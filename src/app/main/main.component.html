@@ -43,19 +43,23 @@
   </div>
   <section id="aboutMe" class="section-container__about">
     <div class="color-container__about">
-      <div class="flex gap-8">
+      <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
         <img
           class="about-me-photo__about"
           src=".\assets\images\about-me-photo.jpg"
           alt="about-me-photo"
         />
         <div class="max-w-72">
-          <h2 class="text-lighter-purple mb-5">A little about me</h2>
-          <p class="text-light-purple mb-5">
+          <h2 class="text-lighter-purple mb-5 text-center md:text-left">
+            A little about me
+          </h2>
+          <p class="text-light-purple mb-5 text-justify md:text-left">
             Heard they are reforming the Dawnguard. Vampire hunters or something
             in the old fort near Riften. Might consider joining up myself.
           </p>
-          <button class="link-button px-7 text-lg">Resume</button>
+          <button class="link-button block px-7 text-lg mx-auto md:ml-0">
+            Resume
+          </button>
         </div>
       </div>
     </div>
@@ -140,7 +144,7 @@
                   >
                     Certificate
                   </button>
-                  <p class="text-light-purple">
+                  <p class="text-light-purple text-left">
                     {{ course.date }}
                     <br />
                     {{ course.source }}

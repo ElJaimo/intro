@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { fromEvent } from 'rxjs';

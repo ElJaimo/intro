@@ -25,7 +25,6 @@
   object-fit: cover;
   border-radius: 12px;
   border: 5px var(--LIGHTER-PURPLE) dashed;
-  outline-offset: 15px;
-  margin: 20px;
+  outline-offset: 15px; 
   outline: 5px var(--DARK-PURPLE) solid;
 }
