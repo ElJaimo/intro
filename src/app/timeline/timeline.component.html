@@ -1,0 +1,140 @@
+<div class="timeline-container">
+  <div class="courses-container first">
+    @for (course of courses.slice(0,3); track $index) {
+    <div
+      class="course-container left flex-row-reverse"
+      [ngClass]="{ active: activeCourse == course.title }"
+      (mouseenter)="activeCourse = course.title"
+    >
+      <figure
+        class="icon-container"
+        [ngClass]="{ inactive: activeCourse !== course.title }"
+      >
+        <img
+          [src]="'/assets/icons/' + course.icon"
+          [alt]="course.title"
+          [ngClass]="course.iconWidth"
+        />
+      </figure>
+      <div class="text-right relative">
+        <h3 class="text-lighter-purple">
+          {{ course.title }}
+        </h3>
+        <div
+          class="flex items-center text-sm"
+          [ngClass]="
+            activeCourse == course.title
+              ? 'justify-between'
+              : 'justify-end'
+          "
+        >
+          <button
+            class="link-button h-fit px-3"
+            (click)="goToLink(course.link)"
+            [hidden]="activeCourse !== course.title"
+          >
+            Certificate
+          </button>
+          <p class="text-light-purple">
+            {{ course.date }}
+            <br />
+            {{ course.source }}
+          </p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="courses-container left">
+    @for (course of courses.slice(3,6); track $index) {
+    <div
+      class="course-container right"
+      [ngClass]="{ active: activeCourse == course.title }"
+      (mouseenter)="activeCourse = course.title"
+    >
+      <figure
+        class="icon-container"
+        [ngClass]="{ inactive: activeCourse !== course.title }"
+      >
+        <img
+          [src]="'/assets/icons/' + course.icon"
+          [alt]="course.title"
+          [ngClass]="course.iconWidth"
+        />
+      </figure>
+      <div class="">
+        <h3 class="text-lighter-purple">
+          {{ course.title }}
+        </h3>
+        <div
+          class="flex items-center flex-row-reverse text-sm"
+          [ngClass]="
+            activeCourse == course.title
+              ? 'justify-between'
+              : 'justify-end'
+          "
+        >
+          <button
+            class="link-button h-fit px-3"
+            (click)="goToLink(course.link)"
+            [hidden]="activeCourse !== course.title"
+          >
+            Certificate
+          </button>
+          <p class="text-light-purple text-left">
+            {{ course.date }}
+            <br />
+            {{ course.source }}
+          </p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="courses-container last">
+    @for (course of courses.slice(-1); track $index) {
+    <div
+      class="course-container left flex-row-reverse"
+      [ngClass]="{ active: activeCourse == course.title }"
+      (mouseenter)="activeCourse = course.title"
+    >
+      <figure
+        class="icon-container"
+        [ngClass]="{ inactive: activeCourse !== course.title }"
+      >
+        <img
+          [src]="'/assets/icons/' + course.icon"
+          [alt]="course.title"
+          [ngClass]="course.iconWidth"
+        />
+      </figure>
+      <div class="text-right relative">
+        <h3 class="text-lighter-purple">
+          {{ course.title }}
+        </h3>
+        <div
+          class="flex items-center text-sm"
+          [ngClass]="
+            activeCourse == course.title
+              ? 'justify-between'
+              : 'justify-end'
+          "
+        >
+          <button
+            class="link-button h-fit px-3"
+            (click)="goToLink(course.link)"
+            [hidden]="activeCourse !== course.title"
+          >
+            Certificate
+          </button>
+          <p class="text-light-purple">
+            {{ course.date }}
+            <br />
+            {{ course.source }}
+          </p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

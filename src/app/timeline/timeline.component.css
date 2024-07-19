@@ -1,0 +1,123 @@
+/* .timeline-container {
+  overflow-y: scroll;
+  height: 70vh;
+  scrollbar-width: 0;
+  @apply px-5;
+} */
+
+
+.courses-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  position: relative;
+  z-index: 1;
+  @apply gap-y-8;
+}
+
+.courses-container.first::before {
+  border-color: var(--LIGHT-PURPLE);
+  border-width: 0 2px 2px 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(100% + 2px);
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: -5;
+  @apply rounded-br-2xl;
+}
+
+/* .courses-container.first::after {
+  content: "°";
+  position: absolute;
+  right: -1.355%;
+  color: var(--LIGHT-PURPLE);
+  top: -1rem;
+  @apply text-4xl;
+} */
+
+.courses-container.left::before {
+  border-color: var(--LIGHT-PURPLE);
+  border-width: 2px 0 2px 2px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(100% + 2px);
+  left: 0;
+  position: absolute;
+  width: 50%;
+  z-index: -5;
+  @apply rounded-l-2xl;
+}
+
+.courses-container.right::before {
+  border-color: var(--LIGHT-PURPLE);
+  border-width: 2px 2px 2px 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(100% + 2px);
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: -5;
+  @apply rounded-r-2xl;
+}
+
+.courses-container.last::before {
+  border-color: var(--LIGHT-PURPLE);
+  border-width: 2px 2px 0 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(100% + 2px);
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: -5;
+  @apply rounded-tr-2xl;
+}
+
+.course-container {
+  align-items: center;
+  display: flex;
+  position: relative;
+  @apply gap-x-4;
+}
+
+.course-container::before {
+  background-color: var(--LIGHT-PURPLE);
+  content: '';
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  width: 14px;
+}
+
+.course-container.active::before {
+  width: 22px;
+}
+
+.course-container.left::before {
+  right: -2rem;
+}
+
+.course-container.right::before {
+  left: -2rem;
+}
+
+.icon-container {
+  align-items: center;
+  display: flex;
+  height: 5.5rem;
+  justify-content: center;
+  transition: width 0.4s ease;
+  @apply w-20;
+}
+
+.icon-container.inactive {
+  width: 0;
+}
