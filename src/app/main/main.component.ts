@@ -50,6 +50,7 @@ export class MainComponent implements OnInit {
     'Python',
     'SQL',
   ];
+  hideNavbar = false;
   
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');

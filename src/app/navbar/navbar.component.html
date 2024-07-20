@@ -1,13 +1,32 @@
-<nav class="navbar-container__navbar">
-  <img
-    src="/assets/logos/jaimos-logo.png"
-    alt=""
-    class="h-full cursor-pointer hover:brightness-125 transition-all duration-500"
-    (click)="goToLink('', false)"
-  />
-  <div class="h-fit flex gap-10 text-xl items-center">
-    <a href="" class="nav-link__navbar">Skills</a>
-    <a href="" class="nav-link__navbar">Courses</a>
-    <a href="" class="nav-link__navbar">Projects</a>
+<nav
+  id="navbar-container"
+  class="navbar-container__outer"
+  (mouseenter)="hoverNavbar = true"
+  (mouseleave)="hoverNavbar = false"
+>
+  <div
+    class="navbar-container__inner"
+    [ngClass]="{ inactive: !(lockNavbar || hoverNavbar) }"
+  >
+    <img
+      src="/assets/logos/jaimos-logo.png"
+      alt=""
+      class="h-4/5 cursor-pointer hover:brightness-125 transition-all duration-500"
+    />
+    <div
+      class="nav-links"
+      [ngClass]="{ inactive: !(lockNavbar || hoverNavbar) }"
+    >
+      <a href="#about-me" class="nav-link__navbar">About</a>
+      <a href="#skills" class="nav-link__navbar">Skills</a>
+      <a href="#courses" class="nav-link__navbar">Courses</a>
+      <a href="" class="nav-link__navbar">Projects</a>
+    </div>
+    <p
+      class="text-4xl text-dark-purple"
+      [ngClass]="lockNavbar || hoverNavbar ? 'hidden' : 'block'"
+    >
+      +
+    </p>
   </div>
 </nav>

@@ -1,16 +1,37 @@
-.navbar-container__navbar {
+.navbar-container__outer {
+  margin: 0 2%;
+  top: -1px;
+  @apply sticky z-10;
+}
+
+.navbar-container__inner {
   align-items: center;
   background-color: rgba(230, 230, 230, 0.6);
   border: 1px rgb(200, 200, 200) solid;
   display: flex;
-  height: 5rem;
+  height: 6rem;
   justify-content: space-between;
   position: absolute;
   top: 1rem;
-  left: 50%;
-  width: 96%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
   @apply pl-4 pr-8 py-1 rounded-3xl mx-auto;
+}
+
+.navbar-container__inner.inactive {
+  width: 12%;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  @apply gap-10 text-xl;
+}
+
+.nav-links.inactive {
+  display: none;
 }
 
 .nav-link__navbar {

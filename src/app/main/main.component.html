@@ -30,18 +30,16 @@
       />
       }
     </div>
-    <button class="scroll-button__main">
+    <a class="scroll-button__main" href="#about-me">
       <span class="material-symbols-outlined text-2xl animate-pulse">
         &#xe5db;
       </span>
-    </button>
+    </a>
   </div>
 </section>
 <div id="page-container">
-  <div class="sticky top-0 z-10">
-    <app-navbar id="navbar"></app-navbar>
-  </div>
-  <section id="aboutMe" class="section-container__about">
+  <app-navbar id="navbar"></app-navbar>
+  <section id="about-me" class="section-container__about">
     <div class="color-container__about">
       <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
         <img
@@ -64,7 +62,7 @@
       </div>
     </div>
   </section>
-  <section class="section-container__skills">
+  <section id="skills" class="section-container__skills">
     <div class="max-w-2xl px-5 mx-auto text-center">
       <h2 class="text-darker-purple mb-10">
         Looking for a developer? <br />
@@ -81,7 +79,7 @@
       </div>
     </div>
   </section>
-  <section class="section-container__courses">
+  <section id="courses" class="section-container__courses">
     <div class="color-container__courses">
       <div class="max-w-3xl px-5 mx-auto text-center">
         <h2 class="text-lighter-purple mb-10">Always willing to learn</h2>

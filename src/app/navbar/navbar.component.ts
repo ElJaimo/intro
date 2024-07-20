@@ -9,10 +9,21 @@ import { NgClass } from '@angular/common';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  showNetworks = false;
-  goToLink(url: string, newPage = true): void {
-    window.open(url, newPage ? '_blank' : '_self');
-  }
+  hoverNavbar = false;
+  lockNavbar = true;
 
-  ngOnInit() {}
+  ngOnInit() {
+    const navbar = document.getElementById('navbar-container')!;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.intersectionRatio < 1) {
+          this.lockNavbar = false;
+        } else {
+          this.lockNavbar = true;
+        }
+      },
+      { threshold: [1] }
+    );
+    observer.observe(navbar);
+  }
 }
