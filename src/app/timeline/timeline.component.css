@@ -82,6 +82,7 @@
 }
 
 .course-container {
+  cursor: default;
   align-items: center;
   display: flex;
   position: relative;
