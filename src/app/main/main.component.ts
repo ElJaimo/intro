@@ -8,7 +8,13 @@ import { TimelineComponent } from '../timeline/timeline.component';
   templateUrl: './main.component.html',
   standalone: true,
   imports: [NgClass, NavbarComponent, TimelineComponent],
-  styleUrls: ['./main-hero.css', 'about-me.css', 'skills.css', 'courses.css'],
+  styleUrls: [
+    './main-hero.css',
+    'about-me.css',
+    'skills.css',
+    'courses.css',
+    'experience.css',
+  ],
 })
 export class MainComponent implements OnInit {
   letter = 'o';
@@ -50,8 +56,46 @@ export class MainComponent implements OnInit {
     'Python',
     'SQL',
   ];
+  experience = [
+    {
+      title: 'Hyundai Singapore',
+      image: '',
+      description: '',
+      link: ''
+    },
+    {
+      title: 'Komoco',
+      image: '',
+      description: '',
+      link: ''
+    },
+    {
+      title: 'Triumph Singapore',
+      image: '',
+      description: '',
+      link: ''
+    },
+    {
+      title: 'Freemasonry Singapore',
+      image: '',
+      description: '',
+      link: ''
+    },
+    {
+      title: '',
+      image: '',
+      description: '',
+      link: ''
+    },
+    {
+      title: '',
+      image: '',
+      description: '',
+      link: ''
+    }
+  ]
   hideNavbar = false;
-  
+
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');
   }

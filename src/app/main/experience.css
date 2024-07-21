@@ -1,0 +1,10 @@
+.section-title__experience {
+  background-color: var(--LIGHT-BG);
+  color: var(--DARKER-PURPLE);
+  text-align: center;
+  @apply py-16;
+}
+
+.section-container__experience {
+  
+}

@@ -1,13 +1,13 @@
-<div class="timeline-container">
-  <div class="courses-container first">
+<div class="timeline-container__courses">
+  <div class="courses-container__courses first">
     @for (course of courses.slice(0,3); track $index) {
     <div
-      class="course-container left flex-row-reverse"
+      class="course-container__courses left flex-row-reverse"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
     >
       <figure
-        class="icon-container"
+        class="icon-container__courses"
         [ngClass]="{ inactive: activeCourse !== course.title }"
       >
         <img
@@ -23,9 +23,7 @@
         <div
           class="flex items-center text-sm"
           [ngClass]="
-            activeCourse == course.title
-              ? 'justify-between'
-              : 'justify-end'
+            activeCourse == course.title ? 'justify-between' : 'justify-end'
           "
         >
           <button
@@ -45,15 +43,15 @@
     </div>
     }
   </div>
-  <div class="courses-container left">
+  <div class="courses-container__courses left">
     @for (course of courses.slice(3,6); track $index) {
     <div
-      class="course-container right"
+      class="course-container__courses right"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
     >
       <figure
-        class="icon-container"
+        class="icon-container__courses"
         [ngClass]="{ inactive: activeCourse !== course.title }"
       >
         <img
@@ -69,9 +67,7 @@
         <div
           class="flex items-center flex-row-reverse text-sm"
           [ngClass]="
-            activeCourse == course.title
-              ? 'justify-between'
-              : 'justify-end'
+            activeCourse == course.title ? 'justify-between' : 'justify-end'
           "
         >
           <button
@@ -91,15 +87,15 @@
     </div>
     }
   </div>
-  <div class="courses-container last">
+  <div class="courses-container__courses last">
     @for (course of courses.slice(-1); track $index) {
     <div
-      class="course-container left flex-row-reverse"
+      class="course-container__courses left flex-row-reverse"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
     >
       <figure
-        class="icon-container"
+        class="icon-container__courses"
         [ngClass]="{ inactive: activeCourse !== course.title }"
       >
         <img
@@ -115,9 +111,7 @@
         <div
           class="flex items-center text-sm"
           [ngClass]="
-            activeCourse == course.title
-              ? 'justify-between'
-              : 'justify-end'
+            activeCourse == course.title ? 'justify-between' : 'justify-end'
           "
         >
           <button

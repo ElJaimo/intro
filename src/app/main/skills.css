@@ -3,7 +3,7 @@
   @apply py-20;
 }
 
-.skill-item {
+.skill-item__skills {
   cursor: default;
   color: var(--DARKER-PURPLE);
   border: 2px var(--DARKER-PURPLE) solid;
@@ -12,8 +12,8 @@
   @apply rounded-full px-4;
 }
 
-.skill-item:hover,
-.skill-item:focus {
+.skill-item__skills:hover,
+.skill-item__skills:focus {
   transform: translateY(-3px);
   box-shadow: 0 8px 10px rgb(0, 0, 0, 0.3);
 }

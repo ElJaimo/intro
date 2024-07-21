@@ -1,4 +1,4 @@
-/* .timeline-container {
+/* .timeline-container__courses {
   overflow-y: scroll;
   height: 70vh;
   scrollbar-width: 0;
@@ -6,7 +6,7 @@
 } */
 
 
-.courses-container {
+.courses-container__courses {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   @apply gap-y-8;
 }
 
-.courses-container.first::before {
+.courses-container__courses.first::before {
   border-color: var(--LIGHT-PURPLE);
   border-width: 0 2px 2px 0;
   bottom: 0;
@@ -30,7 +30,7 @@
   @apply rounded-br-2xl;
 }
 
-/* .courses-container.first::after {
+/* .courses-container__courses.first::after {
   content: "°";
   position: absolute;
   right: -1.355%;
@@ -39,7 +39,7 @@
   @apply text-4xl;
 } */
 
-.courses-container.left::before {
+.courses-container__courses.left::before {
   border-color: var(--LIGHT-PURPLE);
   border-width: 2px 0 2px 2px;
   bottom: 0;
@@ -53,7 +53,7 @@
   @apply rounded-l-2xl;
 }
 
-.courses-container.right::before {
+.courses-container__courses.right::before {
   border-color: var(--LIGHT-PURPLE);
   border-width: 2px 2px 2px 0;
   bottom: 0;
@@ -67,7 +67,7 @@
   @apply rounded-r-2xl;
 }
 
-.courses-container.last::before {
+.courses-container__courses.last::before {
   border-color: var(--LIGHT-PURPLE);
   border-width: 2px 2px 0 0;
   bottom: 0;
@@ -81,7 +81,7 @@
   @apply rounded-tr-2xl;
 }
 
-.course-container {
+.course-container__courses {
   cursor: default;
   align-items: center;
   display: flex;
@@ -89,7 +89,7 @@
   @apply gap-x-4;
 }
 
-.course-container::before {
+.course-container__courses::before {
   background-color: var(--LIGHT-PURPLE);
   content: '';
   height: 2px;
@@ -98,19 +98,19 @@
   width: 14px;
 }
 
-.course-container.active::before {
+.course-container__courses.active::before {
   width: 22px;
 }
 
-.course-container.left::before {
+.course-container__courses.left::before {
   right: -2rem;
 }
 
-.course-container.right::before {
+.course-container__courses.right::before {
   left: -2rem;
 }
 
-.icon-container {
+.icon-container__courses {
   align-items: center;
   display: flex;
   height: 5.5rem;
@@ -119,6 +119,6 @@
   @apply w-20;
 }
 
-.icon-container.inactive {
+.icon-container__courses.inactive {
   width: 0;
 }
