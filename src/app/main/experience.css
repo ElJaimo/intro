@@ -2,9 +2,9 @@
   background-color: var(--LIGHT-BG);
   color: var(--DARKER-PURPLE);
   text-align: center;
-  @apply py-16;
+  @apply py-14;
 }
 
 .section-container__experience {
-  
+
 }
