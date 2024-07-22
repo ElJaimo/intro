@@ -6,7 +6,7 @@
 >
   <div
     class="navbar-container__inner"
-    [ngClass]="{ inactive: !(lockNavbar || hoverNavbar) }"
+    [ngClass]="{ inactive: !(lockNavbar || hoverNavbar || pinNavbar) }"
   >
     <img
       src="/assets/logos/jaimos-logo.png"
@@ -14,17 +14,31 @@
       class="h-4/5 cursor-pointer hover:brightness-125 transition-all duration-500"
     />
     <div
-      class="nav-links"
-      [ngClass]="{ inactive: !(lockNavbar || hoverNavbar) }"
+      class="gap-x-4"
+      [ngClass]="!(lockNavbar || hoverNavbar || pinNavbar) ? 'hidden' : 'flex'"
     >
-      <a href="#about-me" class="nav-link__navbar">About</a>
-      <a href="#skills" class="nav-link__navbar">Skills</a>
-      <a href="#courses" class="nav-link__navbar">Courses</a>
-      <a href="" class="nav-link__navbar">Projects</a>
+      <div class="nav-links">
+        <a href="#about-me" class="nav-link__navbar">About</a>
+        <a href="#skills" class="nav-link__navbar">Skills</a>
+        <a href="#courses" class="nav-link__navbar">Courses</a>
+        <a href="" class="nav-link__navbar">Projects</a>
+      </div>
+      <p
+        class="material-symbols-outlined utility-btn__navbar hover:translate-y-1"
+        [ngClass]="{ 'translate-y-1 brightness-150': pinNavbar == true }"
+        (click)="pinNavbar = !pinNavbar"
+      >
+        {{ pinNavbar ? "keep_off" : "keep" }}
+      </p>
+      <p
+        class="material-symbols-outlined utility-btn__navbar"
+      >
+        dark_mode
+      </p>
     </div>
     <p
       class="text-4xl text-dark-purple"
-      [ngClass]="lockNavbar || hoverNavbar ? 'hidden' : 'block'"
+      [ngClass]="lockNavbar || hoverNavbar || pinNavbar ? 'hidden' : 'block'"
     >
       +
     </p>

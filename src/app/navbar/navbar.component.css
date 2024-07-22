@@ -6,22 +6,24 @@
 
 .navbar-container__inner {
   align-items: center;
-  background-color: rgba(230, 230, 230, 0.6);
+  backdrop-filter: blur(10px);
+  background-color: rgba(230, 230, 230, 0.5);
   border: 1px rgb(200, 200, 200) solid;
   display: flex;
   height: 6rem;
   justify-content: space-between;
+  right: 0;
+  overflow-x: hidden;
   position: absolute;
   top: 1rem;
-  left: 0;
+  transition: all 0.4s ease;
   width: 100%;
-  transition: all 0.3s ease;
-  overflow-x: hidden;
-  @apply pl-4 pr-8 py-1 rounded-3xl mx-auto;
+  @apply px-4 py-1 rounded-3xl mx-auto;
 }
 
 .navbar-container__inner.inactive {
   width: 12%;
+  @apply pr-8;
 }
 
 .nav-links {
@@ -30,18 +32,14 @@
   @apply gap-10 text-xl;
 }
 
-.nav-links.inactive {
-  display: none;
-}
-
 .nav-link__navbar {
-  color: var(--DARK-PURPLE);
+  color: var(--DARKER-PURPLE);
   position: relative;
   transition: color 0.4s ease;
 }
 
 .nav-link__navbar:hover {
-  color: var(--DARKER-PURPLE);
+  filter: brightness(1.5);
 }
 
 .nav-link__navbar::before {
@@ -62,4 +60,12 @@
 .nav-link__navbar:focus::before {
   transform-origin: top left;
   transform: scaleX(1);
+}
+
+.utility-btn__navbar {
+  margin-top: -1.5rem;
+  cursor: pointer;
+  color: var(--DARKER-PURPLE);
+  transition: transform 0.3s ease;
+  @apply hover:brightness-150;
 }

@@ -11,6 +11,7 @@ import { NgClass } from '@angular/common';
 export class NavbarComponent implements OnInit {
   hoverNavbar = false;
   lockNavbar = true;
+  pinNavbar = false;
 
   ngOnInit() {
     const navbar = document.getElementById('navbar-container')!;
