@@ -6,7 +6,10 @@
 >
   <div
     class="navbar-container__inner"
-    [ngClass]="{ inactive: !(lockNavbar || hoverNavbar || pinNavbar) }"
+    [ngClass]="{
+      inactive: !(lockNavbar || hoverNavbar || pinNavbar),
+      pinned: pinNavbar || lockNavbar
+    }"
   >
     <img
       src="/assets/logos/jaimos-logo.png"
@@ -27,20 +30,22 @@
         class="material-symbols-outlined utility-btn__navbar hover:translate-y-1"
         [ngClass]="{ 'translate-y-1 brightness-150': pinNavbar == true }"
         (click)="pinNavbar = !pinNavbar"
+        [title]="pinNavbar ? 'Unpin me!' : 'Pin me!'"
       >
         {{ pinNavbar ? "keep_off" : "keep" }}
       </p>
       <p
         class="material-symbols-outlined utility-btn__navbar"
+        title="Switch to light mode"
       >
         dark_mode
       </p>
     </div>
     <p
-      class="text-4xl text-dark-purple"
+      class="material-symbols-outlined text-4xl text-dark-purple"
       [ngClass]="lockNavbar || hoverNavbar || pinNavbar ? 'hidden' : 'block'"
     >
-      +
+      add
     </p>
   </div>
 </nav>

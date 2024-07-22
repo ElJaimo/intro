@@ -7,7 +7,7 @@
 .navbar-container__inner {
   align-items: center;
   backdrop-filter: blur(10px);
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(230, 230, 230, 0.6);
   border: 1px rgb(200, 200, 200) solid;
   display: flex;
   height: 6rem;
@@ -22,8 +22,12 @@
 }
 
 .navbar-container__inner.inactive {
-  width: 12%;
+  width: 15%;
   @apply pr-8;
+}
+
+.navbar-container__inner.pinned {
+  background-color: rgba(230, 230, 230, 0.5);
 }
 
 .nav-links {
