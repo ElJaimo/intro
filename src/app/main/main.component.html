@@ -63,7 +63,7 @@
     </div>
   </section>
   <section id="skills" class="section-container__skills">
-    <div class="max-w-2xl px-5 mx-auto text-center">
+    <div class="max-w-3xl px-5 mx-auto text-center">
       <h2 class="text-darker-purple mb-10">
         Looking for a developer? <br />
         I might suit you
@@ -72,7 +72,9 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <div class="flex flex-wrap gap-x-8 gap-y-6 justify-center">
+      <div
+        class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
+      >
         @for (skill of skills; track $index) {
         <p class="skill-item__skills">{{ skill }}</p>
         }
@@ -81,7 +83,7 @@
   </section>
   <section id="courses" class="section-container__courses">
     <div class="color-container__courses">
-      <div class="max-w-3xl px-5 mx-auto text-center">
+      <div class="max-w-3xl px-5 mx-auto">
         <h2 class="text-lighter-purple mb-10">Always willing to learn</h2>
         <p class="text-light-purple mb-14">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -98,6 +100,16 @@
         the experience
       </h2>
     </div>
-    <div class="section-container__experience"></div>
+    <div class="section-container__experience">
+      <div class="color-container__experience">
+        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3">
+          @for (work of experience; track $index) {
+          <div>
+            {{ work.title }}
+          </div>
+          }
+        </div>
+      </div>
+    </div>
   </section>
 </div>

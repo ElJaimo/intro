@@ -60,43 +60,50 @@ export class MainComponent implements OnInit {
     {
       title: 'Hyundai Singapore',
       image: 'hyundai-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://hyundai.com.sg/',
     },
     {
       title: 'Komoco',
       image: 'komoco-page.png',
-      description: 'https://www.komoco.com.sg/',
-      link: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      link: 'https://www.komoco.com.sg/',
     },
     {
       title: 'Capella Auto Singapore',
       image: 'capella-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.capella.syion.net/',
     },
     {
       title: 'Freemasonry Singapore',
       image: 'lsa-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.lsa.sg/home',
     },
     {
       title: 'Savage Club Singapore',
       image: 'savage-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://savage.sg/',
     },
     {
       title: 'Ifyny Singapore',
       image: 'ifyni-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.ifyni.com/home',
     },
     {
       title: 'Komoco Autopac System',
       image: 'komoco-autopac-page.png',
-      description: '',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://kaps.komoco.com.sg/',
     },
   ];
