@@ -59,41 +59,47 @@ export class MainComponent implements OnInit {
   experience = [
     {
       title: 'Hyundai Singapore',
-      image: '',
+      image: 'hyundai-page.png',
       description: '',
-      link: ''
+      link: 'https://hyundai.com.sg/',
     },
     {
       title: 'Komoco',
-      image: '',
-      description: '',
-      link: ''
+      image: 'komoco-page.png',
+      description: 'https://www.komoco.com.sg/',
+      link: '',
     },
     {
-      title: 'Triumph Singapore',
-      image: '',
+      title: 'Capella Auto Singapore',
+      image: 'capella-page.png',
       description: '',
-      link: ''
+      link: 'https://www.capella.syion.net/',
     },
     {
       title: 'Freemasonry Singapore',
-      image: '',
+      image: 'lsa-page.png',
       description: '',
-      link: ''
+      link: 'https://www.lsa.sg/home',
     },
     {
-      title: '',
-      image: '',
+      title: 'Savage Club Singapore',
+      image: 'savage-page.png',
       description: '',
-      link: ''
+      link: 'https://savage.sg/',
     },
     {
-      title: '',
-      image: '',
+      title: 'Ifyny Singapore',
+      image: 'ifyni-page.png',
       description: '',
-      link: ''
-    }
-  ]
+      link: 'https://www.ifyni.com/home',
+    },
+    {
+      title: 'Komoco Autopac System',
+      image: 'komoco-autopac-page.png',
+      description: '',
+      link: 'https://kaps.komoco.com.sg/',
+    },
+  ];
   hideNavbar = false;
 
   goToLink(url: string, newPage = true): void {
