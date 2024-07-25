@@ -102,10 +102,34 @@
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
-        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3">
+        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3 gap-4">
           @for (work of experience; track $index) {
-          <div>
-            {{ work.title }}
+          <div
+            class="flex flex-col gap-3 cursor-default"
+            (mouseenter)="hoveringWork(work.image)"
+            (mouseleave)="hoveringWork(work.image)"
+          >
+            <h3 class="text-lighter-purple">{{ work.title }}</h3>
+            <figure
+              (click)="goToLink(work.link)"
+              class="overflow-hidden rounded-md"
+            >
+              <img
+                [src]="'assets/images/' + work.image"
+                [id]="work.image"
+                alt=""
+                class="cursor-pointer transition-transform"
+              />
+            </figure>
+            <p class="text-xs text-justify text-base-purple">
+              {{ work.description }}
+            </p>
+            <button
+              class="link-button text-sm px-3 w-fit"
+              (click)="goToLink(work.link)"
+            >
+              Live URL
+            </button>
           </div>
           }
         </div>

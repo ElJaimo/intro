@@ -113,6 +113,15 @@ export class MainComponent implements OnInit {
     window.open(url, newPage ? '_blank' : '_self');
   }
 
+  hoveringWork(image: string) {
+    let imageId = document.getElementById(image)!;
+    if (imageId.classList.contains('scale-110') == true) {
+      imageId.classList.remove('scale-110');
+    } else {
+      imageId.classList.add('scale-110');
+    }
+  }
+
   ngOnInit() {
     document.getElementById('type-out-content')?.classList.add('typing');
     setTimeout(() => (this.letter = 'e'), 1350);
