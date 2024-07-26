@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  background-color: #19121C;
+  height: 110px;
+  @apply mx-auto p-4;
+}
+
+.network-icon__footer {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
+    brightness(89%) contrast(91%);
+}
+
+.network-icon__footer:hover,
+.network-icon__footer:focus {
+  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
+    brightness(89%) contrast(69%);
+}

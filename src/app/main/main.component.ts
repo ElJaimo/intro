@@ -14,6 +14,7 @@ import { TimelineComponent } from '../timeline/timeline.component';
     'skills.css',
     'courses.css',
     'experience.css',
+    'footer.css'
   ],
 })
 export class MainComponent implements OnInit {
@@ -24,6 +25,7 @@ export class MainComponent implements OnInit {
       title: 'Linkedin',
       svg: '/assets/icons/linkedin-icon.svg',
       classes: 'h-7',
+      Fclasses: 'h-6',
       link: 'https://www.linkedin.com/in/jaime-albarran-61933b17b',
     },
     {
@@ -31,6 +33,7 @@ export class MainComponent implements OnInit {
       title: 'Github',
       svg: '/assets/icons/github-icon.svg',
       classes: 'h-7',
+      Fclasses: 'h-6',
       link: 'https://github.com/ElJaimo',
     },
     {
@@ -38,6 +41,7 @@ export class MainComponent implements OnInit {
       title: 'Mail me',
       svg: '/assets/icons/mail-icon.svg',
       classes: 'h-6',
+      Fclasses: 'h-5',
       link: 'mailto:hawk_1036@live.com.mx',
     },
   ];
@@ -115,10 +119,10 @@ export class MainComponent implements OnInit {
 
   hoveringWork(image: string) {
     let imageId = document.getElementById(image)!;
-    if (imageId.classList.contains('scale-110') == true) {
-      imageId.classList.remove('scale-110');
+    if (imageId.classList.contains('hovering') == true) {
+      imageId.classList.remove('hovering');
     } else {
-      imageId.classList.add('scale-110');
+      imageId.classList.add('hovering');
     }
   }
 

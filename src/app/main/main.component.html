@@ -102,7 +102,12 @@
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
-        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3 gap-4">
+        <p class="max-w-3xl px-5 mx-auto mb-5 text-base-purple text-sm">
+          Sort by <button class="sort-button mr-2">All projects</button
+          > <button class="sort-button mr-2">Company</button> 
+          <button class="sort-button">Personal</button>
+        </p>
+        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3 gap-x-3 gap-y-5">
           @for (work of experience; track $index) {
           <div
             class="flex flex-col gap-3 cursor-default"
@@ -118,14 +123,14 @@
                 [src]="'assets/images/' + work.image"
                 [id]="work.image"
                 alt=""
-                class="cursor-pointer transition-transform"
+                class="work-image"
               />
             </figure>
             <p class="text-xs text-justify text-base-purple">
               {{ work.description }}
             </p>
             <button
-              class="link-button text-sm px-3 w-fit"
+              class="link-button red-btn text-sm px-3 w-fit"
               (click)="goToLink(work.link)"
             >
               Live URL
@@ -137,3 +142,25 @@
     </div>
   </section>
 </div>
+<footer>
+  <div class="h-fit self-end">
+    <div class="grid grid-cols-3 items-end gap-1 w-fit">
+      @for (network of networksLinks; track network.title) {
+      <img
+        [src]="network.svg"
+        [alt]="network.id"
+        [title]="network.title"
+        (click)="goToLink(network.link)"
+        [class]="network.Fclasses"
+        class="network-icon__footer"
+      />
+      }
+    </div>
+    <p class="text-xs text-base-purple mt-3">
+      Made with Angular 17, Tailwind and passion 💜
+    </p>
+  </div>
+  <figure>
+    <img src="/assets/logos/slogan_dark.png" alt="" class="h-full" />
+  </figure>
+</footer>

@@ -6,6 +6,8 @@
 /* RESET AND GLOBAL*/
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   font-display: swap;
   margin: 0;
   padding: 0;
@@ -64,6 +66,6 @@ button.link-button:focus:before {
   --LIGHT-PURPLE: #be95c4;
   --LIGHTER-PURPLE: #e0b1cb;
   /* BACKGROUND */
-  --DARK-BG: #1d1821;
-  --LIGHT-BG: #d9d9d9;
+  /*   --DARK-BG: #1d1821;
+  --LIGHT-BG: #d9d9d9; */
 }
