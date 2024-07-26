@@ -52,8 +52,7 @@
             A little about me
           </h2>
           <p class="text-light-purple mb-5 text-justify md:text-left">
-            Heard they are reforming the Dawnguard. Vampire hunters or something
-            in the old fort near Riften. Might consider joining up myself.
+            I am a physics engineer who ended up working as web developer. 
           </p>
           <button class="link-button block px-7 text-lg mx-auto md:ml-0">
             Resume
@@ -69,8 +68,7 @@
         I might suit you
       </h2>
       <p class="text-dark-purple mb-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        I'm mainly focussed in frontend but 
       </p>
       <div
         class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
@@ -103,12 +101,27 @@
     <div class="section-container__experience">
       <div class="color-container__experience">
         <p class="max-w-3xl px-5 mx-auto mb-5 text-base-purple text-sm">
-          Sort by <button class="sort-button mr-2">All projects</button
-          > <button class="sort-button mr-2">Company</button> 
-          <button class="sort-button">Personal</button>
+          Sort by:<span
+            class="sort-button"
+            [ngClass]="{ 'font-bold': sortBy == 'all' }"
+            (click)="sortBy = 'all'"
+            >All projects</span
+          >
+          <span
+            class="sort-button"
+            [ngClass]="{ 'font-bold': sortBy == 'company' }"
+            (click)="sortBy = 'company'"
+            >Company</span
+          >
+          <span
+            class="sort-button"
+            [ngClass]="{ 'font-bold': sortBy == 'personal' }"
+            (click)="sortBy = 'personal'"
+            >Personal</span
+          >
         </p>
         <div class="max-w-3xl px-5 mx-auto grid grid-cols-3 gap-x-3 gap-y-5">
-          @for (work of experience; track $index) {
+          @for (work of sortExperience(experience); track $index) {
           <div
             class="flex flex-col gap-3 cursor-default"
             (mouseenter)="hoveringWork(work.image)"
@@ -130,7 +143,7 @@
               {{ work.description }}
             </p>
             <button
-              class="link-button red-btn text-sm px-3 w-fit"
+              class="red-button text-sm px-3 w-fit"
               (click)="goToLink(work.link)"
             >
               Live URL

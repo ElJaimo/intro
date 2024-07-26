@@ -20,14 +20,14 @@
   @apply w-full h-full py-20;
 }
 
-button.sort-button {
-  position: relative;
-  border: 2px var(--LIGHT-PURPLE) solid;
-  color: var(--LIGHT-PURPLE);
-  transition: color 0.5s;
-  overflow: hidden;
-  z-index: 0;
-  @apply rounded-xl py-1 px-3 hover:text-lighter-purple;  
+.sort-button {
+  cursor: pointer;
+  margin-left: 0.75rem;
+}
+
+.sort-button:hover,
+.sort-button:focus {
+  font-weight: 700;
 }
 
 .work-image {
@@ -40,27 +40,27 @@ button.sort-button {
   transform: scale(1.1);
 }
 
-button.link-button.red-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 130%;
-  height: 100%;
-  background: rgb(175, 0, 0);
-  z-index: -1;
-  transform-origin: 0 0;
-  transform: translateX(-100%) skewX(-45deg);
-  transition: transform 0.5s;
+button.red-button {
+  background-color: none;
+  border: 2px var(--LIGHT-PURPLE) solid;
+  color: var(--LIGHT-PURPLE);
+  transition: all 0.5s ease;
+  @apply rounded-xl py-1;
 }
 
-button.link-button.red-btn:hover,
-button.link-button.red-btn:focus {
+button.red-button:hover,
+button.red-button:focus {
+  animation: pulse-animation 0.5s 1;
   border-color: white;
   color: white;
+  background-color: rgb(175, 0, 0);
 }
 
-button.link-button.red-btn:hover:before,
-button.link-button.red-btn:focus:before {
-  transform: translateX(0) skewX(-45deg);
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
 }

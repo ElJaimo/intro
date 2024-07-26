@@ -27,18 +27,18 @@
         <a href="" class="nav-link__navbar">Projects</a>
       </div>
       <p
+        class="material-symbols-outlined utility-btn__navbar"
+        title="Switch to light mode"
+      >
+        dark_mode
+      </p>
+      <p
         class="material-symbols-outlined utility-btn__navbar hover:translate-y-1"
         [ngClass]="{ 'translate-y-1 brightness-150': pinNavbar == true }"
         (click)="pinNavbar = !pinNavbar"
         [title]="pinNavbar ? 'Unpin me!' : 'Pin me!'"
       >
         {{ pinNavbar ? "keep_off" : "keep" }}
-      </p>
-      <p
-        class="material-symbols-outlined utility-btn__navbar"
-        title="Switch to light mode"
-      >
-        dark_mode
       </p>
     </div>
     <p

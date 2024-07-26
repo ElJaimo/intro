@@ -14,7 +14,7 @@ import { TimelineComponent } from '../timeline/timeline.component';
     'skills.css',
     'courses.css',
     'experience.css',
-    'footer.css'
+    'footer.css',
   ],
 })
 export class MainComponent implements OnInit {
@@ -67,6 +67,7 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://hyundai.com.sg/',
+      type: 'company',
     },
     {
       title: 'Komoco',
@@ -74,6 +75,7 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.komoco.com.sg/',
+      type: 'company',
     },
     {
       title: 'Capella Auto Singapore',
@@ -81,6 +83,7 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.capella.syion.net/',
+      type: 'company',
     },
     {
       title: 'Freemasonry Singapore',
@@ -88,6 +91,7 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.lsa.sg/home',
+      type: 'company',
     },
     {
       title: 'Savage Club Singapore',
@@ -95,13 +99,15 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://savage.sg/',
+      type: 'company',
     },
     {
-      title: 'Ifyny Singapore',
+      title: 'Ifyni Singapore',
       image: 'ifyni-page.png',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.ifyni.com/home',
+      type: 'company',
     },
     {
       title: 'Komoco Autopac System',
@@ -109,9 +115,10 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://kaps.komoco.com.sg/',
+      type: 'company',
     },
   ];
-  hideNavbar = false;
+  sortBy = 'all';
 
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');
@@ -123,6 +130,14 @@ export class MainComponent implements OnInit {
       imageId.classList.remove('hovering');
     } else {
       imageId.classList.add('hovering');
+    }
+  }
+
+  sortExperience(expArray: any[]) {
+    if (this.sortBy == 'all') {
+      return expArray;
+    } else {
+      return expArray.filter((item) => item.type == this.sortBy);
     }
   }
 
