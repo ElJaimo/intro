@@ -22,14 +22,19 @@
   @apply rounded-br-2xl;
 }
 
-/* .courses-container__courses.first::after {
-  content: "°";
+.courses-container__courses.first::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: none;
+  border-width: 2px;
+  border-color: var(--LIGHT-PURPLE);
   position: absolute;
-  right: -1.355%;
-  color: var(--LIGHT-PURPLE);
-  top: -1rem;
-  @apply text-4xl;
-} */
+  right: 0;
+  top: 0;
+  transform: translate(39%, -100%);
+  @apply text-4xl rounded-full;
+}
 
 .courses-container__courses.left::before {
   border-color: var(--LIGHT-PURPLE);
@@ -71,6 +76,20 @@
   width: 50%;
   z-index: -5;
   @apply rounded-tr-2xl;
+}
+
+.courses-container__courses.last::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: none;
+  border-width: 2px;
+  border-color: var(--LIGHT-PURPLE);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(44%, 98%);
+  @apply text-4xl rounded-full;
 }
 
 .course-container__courses {
