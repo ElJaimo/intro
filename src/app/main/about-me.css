@@ -19,13 +19,12 @@
 }
 
 .about-me-photo__about {
-/*   width: 230px;
-  height: 200px; */
-  height: 100%;
+  width: 230px;
+  height: 230px;
   object-position: 50% 65%;
   object-fit: cover;
   border-radius: 12px;
-  border: 5px var(--LIGHTER-PURPLE) dashed;
+  border: 5px var(--LIGHTER-PURPLE) solid;
   outline-offset: 15px; 
   outline: 5px var(--DARK-PURPLE) solid;
 }

@@ -65,8 +65,8 @@
 .profile-photo__main {
   border-radius: 50%;
   object-fit: cover;
-  width: 10rem;
-  height: 11rem;
+  width: 160px;
+  height: 176px;
 }
 
 .scroll-button__main {
