@@ -67,7 +67,7 @@ export class TimelineComponent implements OnInit {
       link: 'https://coursera.org/share/395b93f5624677d13070fffd63661de5',
     },
   ];
-  activeCourse = 'Análisis de Datos de Google';
+  activeCourse = '';
 
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');

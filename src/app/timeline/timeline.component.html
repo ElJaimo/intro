@@ -5,11 +5,9 @@
       class="course-container__courses left flex-row-reverse"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
+      (mouseleave)="activeCourse = ''"
     >
-      <figure
-        class="icon-container__courses"
-        [ngClass]="{ inactive: activeCourse !== course.title }"
-      >
+      <figure class="icon-container__courses">
         <img
           [src]="'/assets/icons/' + course.icon"
           [alt]="course.title"
@@ -21,7 +19,7 @@
           {{ course.title }}
         </h3>
         <div
-          class="flex items-center text-sm"
+          class="flex items-center text-sm justify-between"
           [ngClass]="
             activeCourse == course.title ? 'justify-between' : 'justify-end'
           "
@@ -29,7 +27,7 @@
           <button
             class="link-button h-fit px-3"
             (click)="goToLink(course.link)"
-            [hidden]="activeCourse !== course.title"
+            [ngClass]="{ inactive: activeCourse !== course.title }"
           >
             Certificate
           </button>
@@ -49,6 +47,7 @@
       class="course-container__courses right"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
+      (mouseleave)="activeCourse = ''"
     >
       <figure
         class="icon-container__courses"
@@ -60,20 +59,15 @@
           [ngClass]="course.iconWidth"
         />
       </figure>
-      <div class="">
+      <div>
         <h3 class="text-lighter-purple">
           {{ course.title }}
         </h3>
-        <div
-          class="flex items-center flex-row-reverse text-sm"
-          [ngClass]="
-            activeCourse == course.title ? 'justify-between' : 'justify-end'
-          "
-        >
+        <div class="flex items-center flex-row-reverse text-sm justify-between">
           <button
             class="link-button h-fit px-3"
             (click)="goToLink(course.link)"
-            [hidden]="activeCourse !== course.title"
+            [ngClass]="{ inactive: activeCourse !== course.title }"
           >
             Certificate
           </button>
@@ -93,6 +87,7 @@
       class="course-container__courses left flex-row-reverse"
       [ngClass]="{ active: activeCourse == course.title }"
       (mouseenter)="activeCourse = course.title"
+      (mouseleave)="activeCourse = ''"
     >
       <figure
         class="icon-container__courses"
@@ -108,16 +103,11 @@
         <h3 class="text-lighter-purple">
           {{ course.title }}
         </h3>
-        <div
-          class="flex items-center text-sm"
-          [ngClass]="
-            activeCourse == course.title ? 'justify-between' : 'justify-end'
-          "
-        >
+        <div class="flex items-center text-sm justify-between">
           <button
             class="link-button h-fit px-3"
             (click)="goToLink(course.link)"
-            [hidden]="activeCourse !== course.title"
+            [ngClass]="{ inactive: activeCourse !== course.title }"
           >
             Certificate
           </button>
