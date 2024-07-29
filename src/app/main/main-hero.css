@@ -1,11 +1,29 @@
 .section-container__main {
   background-color: var(--DARKER-PURPLE);
-  background-image: url(/assets/images/background-1.jpg);
+  background-image: url(/assets/images/background-1-small.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
+}
+
+@media (min-width: 0px) {
+  .section-container__main {
+    background-image: url(/assets/images/background-1-small.webp);
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container__main {
+    background-image: url(/assets/images/background-1-medium.webp);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-container__main {
+    background-image: url(/assets/images/background-1-big.webp);
+  }
 }
 
 .color-container__main {
