@@ -8,13 +8,7 @@
   width: 100vw;
 }
 
-@media (min-width: 320px) {
-  .section-container__main {
-    background-image: url(/assets/images/background-1-mobile.webp);
-  }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 425px) {
   .section-container__main {
     background-image: url(/assets/images/background-1-tablet.webp);
   }
