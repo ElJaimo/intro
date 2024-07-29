@@ -63,7 +63,7 @@ export class MainComponent implements OnInit {
   experience = [
     {
       title: 'Hyundai Singapore',
-      image: 'hyundai-page.png',
+      image: 'hyundai-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://hyundai.com.sg/',
@@ -71,7 +71,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Komoco',
-      image: 'komoco-page.png',
+      image: 'komoco-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.komoco.com.sg/',
@@ -79,7 +79,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Capella Auto Singapore',
-      image: 'capella-page.png',
+      image: 'capella-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.capella.syion.net/',
@@ -87,7 +87,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Freemasonry Singapore',
-      image: 'lsa-page.png',
+      image: 'lsa-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.lsa.sg/home',
@@ -95,7 +95,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Savage Club Singapore',
-      image: 'savage-page.png',
+      image: 'savage-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://savage.sg/',
@@ -103,7 +103,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Ifyni Singapore',
-      image: 'ifyni-page.png',
+      image: 'ifyni-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.ifyni.com/home',
@@ -111,7 +111,7 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Komoco Autopac System',
-      image: 'komoco-autopac-page.png',
+      image: 'komoco-autopac-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://kaps.komoco.com.sg/',
