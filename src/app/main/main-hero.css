@@ -18,6 +18,10 @@
   .section-container__main {
     background-image: url(/assets/images/background-1-tablet.webp);
   }
+  .intro-hero__main {
+    left: 60%;
+    top: 45%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -41,10 +45,12 @@
 .intro-hero__main {
   -ms-transform: translate(-50%, -50%);
   font-family: "Source Code Pro", monospace;
-  left: 60%;
-  top: 45%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  display: flex;
   transform: translate(-50%, -50%);
-  @apply md:flex gap-8 md:gap-10 absolute;
+  @apply flex-col md:flex-row gap-8 md:gap-10;
 }
 
 .type-out__main {
@@ -91,6 +97,7 @@
   object-fit: cover;
   width: 160px;
   height: 176px;
+  @apply mx-auto md:ml-auto;
 }
 
 .scroll-button__main {
@@ -113,6 +120,7 @@
   transition: all 0.5s ease;
   filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
     brightness(89%) contrast(91%);
+  @apply scale-110 md:scale-100;
 }
 
 .network-icon__main:hover,
