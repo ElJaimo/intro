@@ -122,10 +122,14 @@
             >Personal</span
           >
         </p>
-        <div class="max-w-3xl px-5 mx-auto grid grid-cols-3 gap-x-3 gap-y-5">
-          @for (work of sortExperience(experience); track $index) {
+        <div
+          class="experience-container__experience"
+        >
+          @if (sortExperience(experience).length == 0) {
+          <p class="text-light-purple">Coming soon...</p>
+          } @else { @for (work of sortExperience(experience); track $index) {
           <div
-            class="flex flex-col gap-3 cursor-default"
+            class="flex flex-col gap-3 cursor-default w-56"
             (mouseenter)="hoveringWork(work.image)"
             (mouseleave)="hoveringWork(work.image)"
           >
@@ -151,7 +155,7 @@
               Live URL
             </button>
           </div>
-          }
+          } }
         </div>
       </div>
     </div>
