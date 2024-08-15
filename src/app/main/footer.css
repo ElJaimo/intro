@@ -1,10 +1,15 @@
 footer {
+  background-color: #19121c;
+  height: fit-content;
+}
+
+.footer-container__footer {
   display: flex;
-  justify-content: space-between;
   max-width: 1440px;
-  background-color: #19121C;
+  align-items: center;
   height: 110px;
-  @apply mx-auto p-4;
+  padding: 1rem;
+  @apply mx-auto justify-center md:justify-between;
 }
 
 .network-icon__footer {

@@ -122,9 +122,7 @@
             >Personal</span
           >
         </p>
-        <div
-          class="experience-container__experience"
-        >
+        <div class="experience-container__experience">
           @if (sortExperience(experience).length == 0) {
           <p class="text-light-purple">Coming soon...</p>
           } @else { @for (work of sortExperience(experience); track $index) {
@@ -162,24 +160,28 @@
   </section>
 </div>
 <footer>
-  <div class="h-fit self-end">
-    <div class="grid grid-cols-3 items-end gap-1 w-fit">
-      @for (network of networksLinks; track network.title) {
-      <img
-        [src]="network.svg"
-        [alt]="network.id"
-        [title]="network.title"
-        (click)="goToLink(network.link)"
-        [class]="network.Fclasses"
-        class="network-icon__footer"
-      />
-      }
+  <div class="footer-container__footer">
+    <div class="h-fit self-end">
+      <div class="grid grid-cols-3 items-end gap-1 w-fit mx-auto md:ml-0">
+        @for (network of networksLinks; track network.title) {
+        <img
+          [src]="network.svg"
+          [alt]="network.id"
+          [title]="network.title"
+          (click)="goToLink(network.link)"
+          [class]="network.Fclasses"
+          class="network-icon__footer"
+        />
+        }
+      </div>
+      <p class="text-xs text-base-purple mt-3">
+        Made with Angular 17, Tailwind and passion 💜
+      </p>
     </div>
-    <p class="text-xs text-base-purple mt-3">
-      Made with Angular 17, Tailwind and passion 💜
-    </p>
+    <img
+      src="/assets/logos/slogan_dark.png"
+      alt="slogan-img"
+      class="hidden md:block h-full"
+    />
   </div>
-  <figure>
-    <img src="/assets/logos/slogan_dark.png" alt="" class="h-full" />
-  </figure>
 </footer>
