@@ -1,5 +1,5 @@
 footer {
-  background-color: #19121c;
+  background-color: var(--SECONDARY-BG);
   height: fit-content;
 }
 

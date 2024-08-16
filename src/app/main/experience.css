@@ -1,5 +1,5 @@
 .section-title__experience {
-  background-color: var(--LIGHT-BG);
+  background-color: var(--MAIN-BG);
   color: var(--DARKER-PURPLE);
   text-align: center;
   @apply py-14;
@@ -14,7 +14,6 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  max-height: 950px;
 }
 
 @media (min-width: 425px) {
@@ -63,7 +62,7 @@
   overflow-y: auto;
   grid-template-columns: repeat(auto-fit, 14rem);
   justify-content: center;
-  max-height: 25rem;
+  max-height: 60vh;
   @apply mx-auto gap-5;
 }
 

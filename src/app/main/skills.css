@@ -1,5 +1,6 @@
 .section-container__skills {
-  background-color: var(--LIGHT-BG);
+  background-color: var(--MAIN-BG);
+  overflow-y: hidden;
   @apply py-20;
 }
 
