@@ -1,7 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  OnDestroy,
+  ViewChild,
+  AfterViewInit,
+} from '@angular/core';
 import { NgClass } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { TimelineComponent } from '../timeline/timeline.component';
+import { IntersectionObserverService } from '../intersection-observer.service';
 
 @Component({
   selector: 'app-main',
@@ -17,8 +25,36 @@ import { TimelineComponent } from '../timeline/timeline.component';
     'footer.css',
   ],
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   letter = 'o';
+  @ViewChild('SkillsSection') SkillsSection: ElementRef | undefined;
+
+  constructor(
+    private intersectionObserverService: IntersectionObserverService
+  ) {}
+
+  ngOnInit() {
+    document.getElementById('type-out-content')?.classList.add('typing');
+    setTimeout(() => (this.letter = 'e'), 1350);
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.SkillsSection);
+    if (this.SkillsSection) {
+      this.intersectionObserverService.observe(
+        this.SkillsSection.nativeElement
+      );
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.SkillsSection) {
+      this.intersectionObserverService.unobserve(
+        this.SkillsSection.nativeElement
+      );
+    }
+  }
+
   networksLinks = [
     {
       id: 'linkedin',
@@ -138,10 +174,5 @@ export class MainComponent implements OnInit {
     } else {
       return expArray.filter((item) => item.type == this.sortBy);
     }
-  }
-
-  ngOnInit() {
-    document.getElementById('type-out-content')?.classList.add('typing');
-    setTimeout(() => (this.letter = 'e'), 1350);
   }
 }

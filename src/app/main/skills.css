@@ -1,7 +1,13 @@
 .section-container__skills {
   background-color: var(--MAIN-BG);
   overflow-y: hidden;
-  @apply py-20;
+  @apply max-h-0;
+}
+
+.section-container__skills.show-section {
+  transition: all 0.6s ease;
+  transition-delay: 0.4s;
+  @apply max-h-screen py-20;
 }
 
 .skill-item__skills {
