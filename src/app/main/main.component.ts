@@ -78,6 +78,14 @@ export class MainComponent implements OnInit {
       type: 'company',
     },
     {
+      title: 'Komoco Autopac System',
+      image: 'komoco-autopac-page.jpg',
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      link: 'https://kaps.komoco.com.sg/',
+      type: 'company',
+    },
+    {
       title: 'Capella Auto Singapore',
       image: 'capella-page.jpg',
       description:
@@ -107,14 +115,6 @@ export class MainComponent implements OnInit {
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
       link: 'https://www.ifyni.com/home',
-      type: 'company',
-    },
-    {
-      title: 'Komoco Autopac System',
-      image: 'komoco-autopac-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
-      link: 'https://kaps.komoco.com.sg/',
       type: 'company',
     },
   ];

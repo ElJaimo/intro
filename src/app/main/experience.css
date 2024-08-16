@@ -31,12 +31,12 @@
 }
 
 .experience-container__experience {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
   overflow-y: auto;
+  grid-template-columns: repeat(auto-fit, 14rem);
+  justify-content: center;
   max-height: 25rem;
-  @apply max-w-3xl px-5 mx-auto gap-y-5;
+  @apply max-w-3xl px-5 mx-auto gap-5;
 }
 
 .experience-container__experience::-webkit-scrollbar {
@@ -53,6 +53,13 @@
 
 .experience-container__experience::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+.experience-item__experience {
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  @apply gap-3 px-2;
 }
 
 .work-image {

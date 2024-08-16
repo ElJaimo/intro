@@ -72,8 +72,9 @@
       </h2>
       <p class="text-dark-purple mb-10">
         Currently I'm mainly focused in frontend stuff, but I'm used to adapt to
-        another tasks and roles like backend and design assistance, therefore I
-        have learned tools beyond my main area.
+        another tasks and roles like backend and design assistance
+        <br />
+        Therefore I have learned tools beyond my main area.
       </p>
       <div
         class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
@@ -102,7 +103,7 @@
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
-        <p class="max-w-3xl px-5 mx-auto mb-5 text-base-purple text-sm">
+        <p class="max-w-3xl px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
           Sort by:<span
             class="sort-button"
             [ngClass]="{ 'font-bold': sortBy == 'all' }"
@@ -127,7 +128,7 @@
           <p class="text-light-purple">Coming soon...</p>
           } @else { @for (work of sortExperience(experience); track $index) {
           <div
-            class="flex flex-col gap-3 cursor-default w-56"
+            class="experience-item__experience"
             (mouseenter)="hoveringWork(work.image)"
             (mouseleave)="hoveringWork(work.image)"
           >
