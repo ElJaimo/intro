@@ -82,7 +82,6 @@ export class MainComponent implements OnInit {
       image: 'komoco-autopac-page.jpg',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
-      link: 'https://kaps.komoco.com.sg/',
       type: 'company',
     },
     {

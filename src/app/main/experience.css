@@ -6,18 +6,46 @@
 }
 
 .section-container__experience {
-  /* background-image: url(/assets/images/background-3.jpg); */
+  background-image: url(/assets/images/backgrounds/background-5-mobile.webp);
   background-attachment: fixed;
   background-color: var(--DARKER-PURPLE);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
+  height: 100vh;
+  max-height: 950px;
+}
+
+@media (min-width: 425px) {
+  .section-container__experience {
+    background-image: url(/assets/images/backgrounds/background-5-tablet.webp);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container__experience {
+    background-image: url(/assets/images/backgrounds/background-5-laptop.webp);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-container__experience {
+    background-image: url(/assets/images/backgrounds/background-5-desktop.webp);
+  }
 }
 
 .color-container__experience {
-  background-color: rgb(0, 0, 0, 0.4);
-  @apply w-full h-full py-20;
+  background-color: rgba(24, 1, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply w-full h-full py-20 px-4;
+}
+
+.section-container-inner__experience {
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply p-5 rounded-xl max-w-3xl w-full;
 }
 
 .sort-button {
@@ -36,7 +64,7 @@
   grid-template-columns: repeat(auto-fit, 14rem);
   justify-content: center;
   max-height: 25rem;
-  @apply max-w-3xl px-5 mx-auto gap-5;
+  @apply mx-auto gap-5;
 }
 
 .experience-container__experience::-webkit-scrollbar {

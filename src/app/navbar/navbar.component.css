@@ -1,7 +1,8 @@
 .navbar-container__outer {
   margin: 0 2%;
   top: -1px;
-  @apply sticky z-10;
+  max-width: 1440px;
+  @apply sticky z-10 mx-auto hidden md:block;
 }
 
 .navbar-container__inner {
@@ -12,22 +13,40 @@
   display: flex;
   height: 6rem;
   justify-content: space-between;
-  right: 0;
+  right: 1rem;
   overflow-x: hidden;
   position: absolute;
   top: 1rem;
   transition: all 0.4s ease;
-  width: 100%;
-  @apply px-4 py-1 rounded-3xl mx-auto;
+  max-width: 1440px;
+  width: calc(100% - 2rem);
+  @apply px-4 py-1 rounded-3xl;
 }
 
 .navbar-container__inner.inactive {
-  width: 15%;
-  @apply pr-8;
+  justify-content: center;
+  width: 6rem;
 }
 
 .navbar-container__inner.pinned {
   background-color: rgba(230, 230, 230, 0.5);
+}
+
+.icon-img__navbar {
+  cursor: pointer;
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  @apply h-4/5 cursor-pointer brightness-125 hover:brightness-200;
+}
+
+@media (min-width: 768px) {
+
+  .navbar-container__inner.inactive {
+    width: 15%;
+    min-width: 150px;
+    justify-content: space-between;
+    @apply pr-8;
+  }
 }
 
 .nav-links {
@@ -71,5 +90,44 @@
   cursor: pointer;
   color: var(--DARKER-PURPLE);
   transition: transform 0.3s ease;
-  @apply hover:brightness-150;
+  @apply hover:brightness-200;
+}
+
+/* SMALL NAVBAR */
+
+.navbar-container-sm__outer {
+  margin: 0 2%;
+  top: -1px;
+  @apply sticky z-10 block md:hidden;
+}
+
+.navbar-container-sm__inner {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(230, 230, 230, 0.6);
+  border: 1px rgb(200, 200, 200) solid;
+  display: flex;
+  height: 19rem;
+  justify-content: space-between;
+  right: 0;
+  overflow-x: hidden;
+  position: absolute;
+  top: 1rem;
+  transition: all 0.4s ease;
+  width: fit-content;
+  z-index: 11;
+  @apply px-4 py-1 rounded-3xl;
+}
+
+.navbar-container-sm__inner.inactive {
+  justify-content: center;
+  height: 6rem;
+  width: 6rem;
+}
+
+.nav-links-sm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @apply gap-10 text-lg;
 }

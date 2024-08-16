@@ -55,7 +55,7 @@
           </h2>
           <p class="text-light-purple mb-5 text-justify md:text-left">
             I am a physics engineer and a varied technician who ended up working
-            as web developer. I love to cook, psychology and minecraft.
+            as web developer. I love cooking, drawing and minecraft.
           </p>
           <button class="link-button block px-7 text-lg mx-auto md:ml-0">
             Resume
@@ -98,63 +98,69 @@
     <div class="section-title__experience">
       <h2 class="w-fit mx-auto">
         The work, <br />
-        the experience
+        the projects
       </h2>
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
-        <p class="max-w-3xl px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
-          Sort by:<span
-            class="sort-button"
-            [ngClass]="{ 'font-bold': sortBy == 'all' }"
-            (click)="sortBy = 'all'"
-            >All projects</span
+        <div class="section-container-inner__experience">
+          <p
+            class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm"
           >
-          <span
-            class="sort-button"
-            [ngClass]="{ 'font-bold': sortBy == 'company' }"
-            (click)="sortBy = 'company'"
-            >Company</span
-          >
-          <span
-            class="sort-button"
-            [ngClass]="{ 'font-bold': sortBy == 'personal' }"
-            (click)="sortBy = 'personal'"
-            >Personal</span
-          >
-        </p>
-        <div class="experience-container__experience">
-          @if (sortExperience(experience).length == 0) {
-          <p class="text-light-purple">Coming soon...</p>
-          } @else { @for (work of sortExperience(experience); track $index) {
-          <div
-            class="experience-item__experience"
-            (mouseenter)="hoveringWork(work.image)"
-            (mouseleave)="hoveringWork(work.image)"
-          >
-            <h3 class="text-lighter-purple">{{ work.title }}</h3>
-            <figure
-              (click)="goToLink(work.link)"
-              class="overflow-hidden rounded-md"
+            Sort by:<span
+              class="sort-button"
+              [ngClass]="{ 'font-bold': sortBy == 'all' }"
+              (click)="sortBy = 'all'"
+              >All projects</span
             >
-              <img
-                [src]="'assets/images/' + work.image"
-                [id]="work.image"
-                [alt]="work.title"
-                class="work-image"
-              />
-            </figure>
-            <p class="text-xs text-justify text-base-purple">
-              {{ work.description }}
-            </p>
-            <button
-              class="red-button text-sm px-3 w-fit"
-              (click)="goToLink(work.link)"
+            <span
+              class="sort-button"
+              [ngClass]="{ 'font-bold': sortBy == 'company' }"
+              (click)="sortBy = 'company'"
+              >Company</span
             >
-              Live URL
-            </button>
+            <span
+              class="sort-button"
+              [ngClass]="{ 'font-bold': sortBy == 'personal' }"
+              (click)="sortBy = 'personal'"
+              >Personal</span
+            >
+          </p>
+          <div class="experience-container__experience">
+            @if (sortExperience(experience).length == 0) {
+            <p class="text-light-purple">Coming soon...</p>
+            } @else { @for (work of sortExperience(experience); track $index) {
+            <div
+              class="experience-item__experience"
+              (mouseenter)="hoveringWork(work.image)"
+              (mouseleave)="hoveringWork(work.image)"
+            >
+              <h3 class="text-lighter-purple">{{ work.title }}</h3>
+              <figure
+                (click)="goToLink(work.link)"
+                class="overflow-hidden rounded-md"
+              >
+                <img
+                  [src]="'assets/images/' + work.image"
+                  [id]="work.image"
+                  [alt]="work.title"
+                  class="work-image"
+                />
+              </figure>
+              <p class="text-xs text-justify text-base-purple">
+                {{ work.description }}
+              </p>
+              @if (work.link) {
+              <button
+                class="red-button text-sm px-3 w-fit"
+                (click)="goToLink(work.link)"
+              >
+                Live URL
+              </button>
+              }
+            </div>
+            } }
           </div>
-          } }
         </div>
       </div>
     </div>
