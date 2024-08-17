@@ -1,0 +1,90 @@
+{
+  "MAIN-HERO": {
+    "GREETINGS1": "Hello there",
+    "GREETINGS2": "Soy",
+    "GREETINGS3": "Desarrollador Web",
+    "NETWORKS": {
+      "LINKEDIN": "Linkedin",
+      "GITHUB": "Github",
+      "EMAIL": "Email"
+    }
+  },
+  "NAVBAR": {
+    "LINKS": {
+      "ABOUT": "Acerca",
+      "SKILLS": "Habilidades",
+      "COURSES": "Cursos",
+      "PROJECTS": "Projectos"
+    },
+    "ICONS": {
+      "TRANSLATE": "Switch to english",
+      "PIN": "Fijar",
+      "UNPIN": "Soltar"
+    }
+  },
+  "ABOUT-ME": {
+    "TITLE": "Un poco acerca de mí",
+    "CONTENT": "Soy un ingeniero en física y técnico variado que terminó trabajando como desarrollador web. Me encanta cocinar, dibujar y minecraft.",
+    "BUTTON": "Currículum"
+  },
+  "SKILLS": {
+    "TITLE1": "Buscas un desarrollador?",
+    "TITLE2": "Puedes haberlo encontrado",
+    "CONTENT1": "Actualmente estoy principalmente enfocado en frontend, pero estoy habituado a adaptarme a otras tareas como apoyar en backend y diseño.",
+    "CONTENT2": "Por lo tanto he aprendido herramientas mas allá de mi área principal."
+  },
+  "COURSES": {
+    "TITLE": "Siempre dispuesto a aprender",
+    "CONTENT": "A lo largo de mi carrera profesional he descubierto que siempre hay algo nuevo para aprender, incluso si crees dominar algo, no hay que cerrarse a nuevo conocimiento!",
+    "BUTTON": "Certificado",
+    "DATES": {
+      "JAN": "Ene, 2024",
+      "APR": "Abr, 2024",
+      "MAY": "May, 2024",
+      "JUN": "Jun, 2024",
+      "JUL": "Jul, 2024"
+    }
+  },
+  "PROJECTS": {
+    "TITLE1": "El trabajo,",
+    "TITLE2": "Los proyectos",
+    "DESCRIPTION": "Considero que el trabajo en equipo es fundamental no solo para el trabajo, por lo que a lo largo de mi carrera he colaborado con mis compañeros constantemente para el desarrollo de los projectos asi como mis propias habilidades.",
+    "ORDER": {
+      "LABEL": "Ordenar por:",
+      "ALL": "Todos",
+      "COMPANY": "Compañía",
+      "PERSONAL": "Personales",
+      "SOON": "Próximamente..."
+    },
+    "BUTTON": "Abrir URL",
+    "HYUNDAI": {
+      "TITLE": "Hyundai Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "KOMOCO": {
+      "TITLE": "Komoco",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "AUTOPAC": {
+      "TITLE": "Komoco Autopac System",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "CAPELLA": {
+      "TITLE": "Capella Auto Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "MASONRY": {
+      "TITLE": "Freemasonry Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "SAVAGE": {
+      "TITLE": "Savage Club Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "IFYNI": {
+      "TITLE": "Ifyni Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    }
+  },
+  "FOOTER": "Hecho con Angular 17, Tailwind y echandole ganas 💜"
+}
