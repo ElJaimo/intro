@@ -3,8 +3,10 @@
     <div class="intro-hero__main">
       <div class="text-center md:text-right">
         <h1 class="text-5xl text-lighter-purple mb-4 leading-tight">
-          Hello there,<br />
-          I'm
+          <!-- Hello there,<br />
+          I'm -->
+          {{ "MAIN-HERO.GREETINGS1" | translate }} <br />
+          {{ "MAIN-HERO.GREETINGS2" | translate }}
           <span id="type-out-content" class="type-out__main"
             >&lt;Jaim<span>{{ letter }}</span
             >&gt;</span
@@ -104,9 +106,7 @@
     <div class="section-container__experience">
       <div class="color-container__experience">
         <div class="section-container-inner__experience">
-          <p
-            class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm"
-          >
+          <p class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
             Sort by:<span
               class="sort-button"
               [ngClass]="{ 'font-bold': sortBy == 'all' }"

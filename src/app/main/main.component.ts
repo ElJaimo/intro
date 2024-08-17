@@ -10,12 +10,13 @@ import { NgClass } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { IntersectionObserverService } from '../intersection-observer.service';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   standalone: true,
-  imports: [NgClass, NavbarComponent, TimelineComponent],
+  imports: [NgClass, NavbarComponent, TimelineComponent, TranslateModule],
   styleUrls: [
     './main-hero.css',
     'about-me.css',
@@ -30,8 +31,11 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('SkillsSection') SkillsSection: ElementRef | undefined;
 
   constructor(
-    private intersectionObserverService: IntersectionObserverService
-  ) {}
+    private intersectionObserverService: IntersectionObserverService,
+    private translate: TranslateService
+  ) {
+    this.translate.setDefaultLang('es');
+  }
 
   ngOnInit() {
     document.getElementById('type-out-content')?.classList.add('typing');
