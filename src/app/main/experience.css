@@ -89,14 +89,21 @@
   @apply gap-3 px-2;
 }
 
-.work-image {
+.work-figure {
   cursor: pointer;
-  height: 150px;
-  @apply transition-transform;
+  overflow: hidden;
+  background-color: white;
+  @apply rounded-md;
 }
 
-.work-image.hovering {
-  transform: scale(1.1);
+.work-image {
+  height: 150px;
+  position: relative;
+  @apply transition-colors;
+}
+
+.work-image:hover {
+  filter: opacity(0.8);
 }
 
 button.red-button {
