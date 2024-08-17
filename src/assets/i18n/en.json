@@ -2,6 +2,88 @@
   "MAIN-HERO": {
     "GREETINGS1": "Hello there",
     "GREETINGS2": "I'm",
-    "GREETINGS3": "A Web Developer"
-  }
+    "GREETINGS3": "A Web Developer",
+    "NETWORKS": {
+      "LINKEDIN": "Linkedin",
+      "GITHUB": "Github",
+      "EMAIL": "Mail me"
+    }
+  },
+  "NAVBAR": {
+    "LINKS": {
+      "ABOUT": "About",
+      "SKILLS": "Skills",
+      "COURSES": "Courses",
+      "PROJECTS": "Projects"
+    },
+    "ICONS": {
+      "TRANSLATE": "Cambiar a español",
+      "PIN": "Pin me!",
+      "UNPIN": "Unpin me!"
+    }
+  },
+  "ABOUT-ME": {
+    "TITLE": "A little about me",
+    "CONTENT": "I am a physics engineer and a varied technician who ended up working as web developer. I love cooking, drawing and minecraft.",
+    "BUTTON": "Resume"
+  },
+  "SKILLS": {
+    "TITLE1": "Looking for a developer?",
+    "TITLE2": "I might suit you",
+    "CONTENT1": "Currently I'm mainly focused in frontend stuff, but I'm used to adapt to another tasks and roles like backend and design assistance.",
+    "CONTENT2": "Therefore I have learned tools beyond my main area."
+  },
+  "COURSES": {
+    "TITLE": "Always willing to learn",
+    "CONTENT": "Throughout my professional career I have discovered that there is always something new to learn, even if you think you have mastered something, do not close yourself to new knowledge!",
+    "BUTTON": "Certificate",
+    "DATES": {
+      "JAN": "Jan, 2024",
+      "APR": "Apr, 2024",
+      "MAY": "May, 2024",
+      "JUN": "Jun, 2024",
+      "JUL": "Jul, 2024"
+    }
+  },
+  "PROJECTS": {
+    "TITLE1": "The work",
+    "TITLE2": "The projects",
+    "ORDER": {
+      "LABEL": "Sort by:",
+      "ALL": "All Projects",
+      "COMPANY": "Company",
+      "PERSONAL": "Personal",
+      "SOON": "Coming soon..."
+    },
+    "BUTTON": "Live URL",
+    "HYUNDAI": {
+      "TITLE": "Hyundai Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "KOMOCO": {
+      "TITLE": "Komoco",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "AUTOPAC": {
+      "TITLE": "Komoco Autopac System",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "CAPELLA": {
+      "TITLE": "Capella Auto Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "MASONRY": {
+      "TITLE": "Freemasonry Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "SAVAGE": {
+      "TITLE": "Savage Club Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    },
+    "IFYNI": {
+      "TITLE": "Ifyni Singapore",
+      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+    }
+  },
+  "FOOTER": "Made with Angular 17, Tailwind and passion 💜"
 }

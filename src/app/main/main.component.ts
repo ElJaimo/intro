@@ -62,7 +62,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   networksLinks = [
     {
       id: 'linkedin',
-      title: 'Linkedin',
+      title: 'MAIN-HERO.NETWORKS.LINKEDIN',
       svg: '/assets/icons/linkedin-icon.svg',
       classes: 'h-7',
       Fclasses: 'h-6',
@@ -70,7 +70,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 'github',
-      title: 'Github',
+      title: 'MAIN-HERO.NETWORKS.GITHUB',
       svg: '/assets/icons/github-icon.svg',
       classes: 'h-7',
       Fclasses: 'h-6',
@@ -78,7 +78,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 'mail',
-      title: 'Mail me',
+      title: 'MAIN-HERO.NETWORKS.EMAIL',
       svg: '/assets/icons/mail-icon.svg',
       classes: 'h-6',
       Fclasses: 'h-5',
@@ -102,57 +102,50 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   ];
   experience = [
     {
-      title: 'Hyundai Singapore',
+      title: 'PROJECTS.HYUNDAI.TITLE',
       image: 'hyundai-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.HYUNDAI.DESCRIPTION',
       link: 'https://hyundai.com.sg/',
       type: 'company',
     },
     {
-      title: 'Komoco',
+      title: 'PROJECTS.KOMOCO.TITLE',
       image: 'komoco-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.KOMOCO.DESCRIPTION',
       link: 'https://www.komoco.com.sg/',
       type: 'company',
     },
     {
-      title: 'Komoco Autopac System',
+      title: 'PROJECTS.AUTOPAC.TITLE',
       image: 'komoco-autopac-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.AUTOPAC.DESCRIPTION',
       type: 'company',
     },
     {
-      title: 'Capella Auto Singapore',
+      title: 'PROJECTS.CAPELLA.TITLE',
       image: 'capella-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.CAPELLA.DESCRIPTION',
       link: 'https://www.capella.syion.net/',
       type: 'company',
     },
     {
-      title: 'Freemasonry Singapore',
+      title: 'PROJECTS.MASONRY.TITLE',
       image: 'lsa-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.MASONRY.DESCRIPTION',
       link: 'https://www.lsa.sg/home',
       type: 'company',
     },
     {
-      title: 'Savage Club Singapore',
+      title: 'PROJECTS.SAVAGE.TITLE',
       image: 'savage-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.SAVAGE.DESCRIPTION',
       link: 'https://savage.sg/',
       type: 'company',
     },
     {
-      title: 'Ifyni Singapore',
+      title: 'PROJECTS.IFYNI.TITLE',
       image: 'ifyni-page.jpg',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!',
+      description: 'PROJECTS.IFYNI.DESCRIPTION',
       link: 'https://www.ifyni.com/home',
       type: 'company',
     },

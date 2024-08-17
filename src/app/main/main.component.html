@@ -3,8 +3,6 @@
     <div class="intro-hero__main">
       <div class="text-center md:text-right">
         <h1 class="text-5xl text-lighter-purple mb-4 leading-tight">
-          <!-- Hello there,<br />
-          I'm -->
           {{ "MAIN-HERO.GREETINGS1" | translate }} <br />
           {{ "MAIN-HERO.GREETINGS2" | translate }}
           <span id="type-out-content" class="type-out__main"
@@ -27,7 +25,7 @@
       <img
         [src]="network.svg"
         [alt]="network.id"
-        [title]="network.title"
+        [title]="network.title | translate"
         (click)="goToLink(network.link)"
         [class]="network.classes"
         class="network-icon__main"
@@ -55,14 +53,13 @@
         />
         <div class="max-w-72">
           <h2 class="text-lighter-purple mb-5 text-center md:text-left">
-            A little about me
+            {{ "ABOUT-ME.TITLE" | translate }}
           </h2>
           <p class="text-light-purple mb-5 text-justify md:text-left">
-            I am a physics engineer and a varied technician who ended up working
-            as web developer. I love cooking, drawing and minecraft.
+            {{ "ABOUT-ME.CONTENT" | translate }}
           </p>
           <button class="link-button block px-7 text-lg mx-auto md:ml-0">
-            Resume
+            {{ "ABOUT-ME.BUTTON" | translate }}
           </button>
         </div>
       </div>
@@ -71,14 +68,13 @@
   <section #SkillsSection id="skills" class="section-container__skills">
     <div class="max-w-3xl px-5 mx-auto text-center">
       <h2 class="text-darker-purple mb-10">
-        Looking for a developer? <br />
-        I might suit you
+        {{ "SKILLS.TITLE1" | translate }} <br />
+        {{ "SKILLS.TITLE2" | translate }}
       </h2>
       <p class="text-dark-purple mb-10">
-        Currently I'm mainly focused in frontend stuff, but I'm used to adapt to
-        another tasks and roles like backend and design assistance
+        {{ "SKILLS.CONTENT1" | translate }}
         <br />
-        Therefore I have learned tools beyond my main area.
+        {{ "SKILLS.CONTENT2" | translate }}
       </p>
       <div
         class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
@@ -92,56 +88,60 @@
   <section id="courses" class="section-container__courses">
     <div class="color-container__courses">
       <div class="max-w-3xl px-5 mx-auto">
-        <h2 class="text-lighter-purple mb-10">Always willing to learn</h2>
-        <p class="text-light-purple mb-14">Si.</p>
+        <h2 class="text-lighter-purple mb-10">
+          {{ "COURSES.TITLE" | translate }}
+        </h2>
+        <p class="text-light-purple mb-14">
+          {{ "COURSES.CONTENT" | translate }}
+        </p>
         <app-timeline />
       </div>
     </div>
   </section>
-  <section id="experience">
+  <section id="projects">
     <div class="section-title__experience">
       <h2 class="w-fit mx-auto">
-        The work, <br />
-        the projects
+        {{ "PROJECTS.TITLE1" | translate }}<br />
+        {{ "PROJECTS.TITLE2" | translate }}
       </h2>
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
         <div class="section-container-inner__experience">
           <p class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
-            Sort by:<span
+            {{ "PROJECTS.ORDER.LABEL" | translate
+            }}<span
               class="sort-button"
               [ngClass]="{ 'font-bold': sortBy == 'all' }"
               (click)="sortBy = 'all'"
-              >All projects</span
+              >{{ "PROJECTS.ORDER.ALL" | translate }}</span
             >
             <span
               class="sort-button"
               [ngClass]="{ 'font-bold': sortBy == 'company' }"
               (click)="sortBy = 'company'"
-              >Company</span
+              >{{ "PROJECTS.ORDER.COMPANY" | translate }}</span
             >
             <span
               class="sort-button"
               [ngClass]="{ 'font-bold': sortBy == 'personal' }"
               (click)="sortBy = 'personal'"
-              >Personal</span
+              >{{ "PROJECTS.ORDER.PERSONAL" | translate }}</span
             >
           </p>
           <div class="experience-container__experience">
             @if (sortExperience(experience).length == 0) {
-            <p class="text-light-purple">Coming soon...</p>
+            <p class="text-light-purple">
+              {{ "PROJECTS.ORDER.SOON" | translate }}
+            </p>
             } @else { @for (work of sortExperience(experience); track $index) {
             <div
               class="experience-item__experience"
               (mouseenter)="hoveringWork(work.image)"
               (mouseleave)="hoveringWork(work.image)"
             >
-              <h3 class="text-lighter-purple">{{ work.title }}</h3>
-              <figure
-                (click)="goToLink(work.link)"
-                class="overflow-hidden rounded-md"
-              >
+              <h3 class="text-lighter-purple">{{ work.title | translate }}</h3>
+              <figure (click)="goToLink(work.link)" class="work-figure">
                 <img
                   [src]="'assets/images/' + work.image"
                   [id]="work.image"
@@ -150,14 +150,14 @@
                 />
               </figure>
               <p class="text-xs text-justify text-base-purple">
-                {{ work.description }}
+                {{ work.description | translate }}
               </p>
               @if (work.link) {
               <button
                 class="red-button text-sm px-3 w-fit"
                 (click)="goToLink(work.link)"
               >
-                Live URL
+                {{ "PROJECTS.BUTTON" | translate }}
               </button>
               }
             </div>
@@ -176,7 +176,7 @@
         <img
           [src]="network.svg"
           [alt]="network.id"
-          [title]="network.title"
+          [title]="network.title | translate"
           (click)="goToLink(network.link)"
           [class]="network.Fclasses"
           class="network-icon__footer"
@@ -184,7 +184,7 @@
         }
       </div>
       <p class="text-xs text-base-purple mt-3">
-        Made with Angular 17, Tailwind and passion 💜
+        {{ "FOOTER" | translate }}
       </p>
     </div>
     <img

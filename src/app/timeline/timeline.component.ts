@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-timeline',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, TranslateModule],
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css'],
 })
@@ -12,7 +13,7 @@ export class TimelineComponent implements OnInit {
   courses = [
     {
       title: 'Análisis de Datos de Google',
-      date: 'Jan, 2024',
+      date: 'COURSES.DATES.JAN',
       source: 'Google',
       icon: 'data-icon.png',
       iconWidth: 'w-20',
@@ -20,7 +21,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Getting Started with Front-End and Web Development',
-      date: 'Apr, 2024',
+      date: 'COURSES.DATES.APR',
       source: 'IBM',
       icon: 'frontend-icon.png',
       iconWidth: 'w-20',
@@ -28,7 +29,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Introduction to Software Engineering',
-      date: 'Apr, 2024',
+      date: 'COURSES.DATES.APR',
       source: 'IBM',
       icon: 'engineering-icon.png',
       iconWidth: 'w-20',
@@ -36,7 +37,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Designing User Interfaces and Experiences (UI/UX)',
-      date: 'May, 2024',
+      date: 'COURSES.DATES.MAY',
       source: 'IBM',
       icon: 'uiux-icon.png',
       iconWidth: 'w-12',
@@ -44,7 +45,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Introduction to HTML, CSS, & JavaScript',
-      date: 'Jun, 2024',
+      date: 'COURSES.DATES.JUN',
       source: 'IBM',
       icon: 'html-css-js-icon.png',
       iconWidth: 'w-16',
@@ -52,7 +53,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Developing Websites and Front-Ends with Bootstrap',
-      date: 'Jun, 2024',
+      date: 'COURSES.DATES.JUN',
       source: 'IBM',
       icon: 'bootstrap-icon.png',
       iconWidth: 'w-20',
@@ -60,7 +61,7 @@ export class TimelineComponent implements OnInit {
     },
     {
       title: 'Getting Started with Git and GitHub',
-      date: 'Jul, 2024',
+      date: 'COURSES.DATES.JUL',
       source: 'IBM',
       icon: 'git-icon.png',
       iconWidth: 'w-20',

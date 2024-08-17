@@ -29,10 +29,10 @@
             (click)="goToLink(course.link)"
             [ngClass]="{ inactive: activeCourse !== course.title }"
           >
-            Certificate
+            {{ "COURSES.BUTTON" | translate }}
           </button>
           <p class="text-light-purple">
-            {{ course.date }}
+            {{ course.date | translate }}
             <br />
             {{ course.source }}
           </p>
@@ -69,10 +69,10 @@
             (click)="goToLink(course.link)"
             [ngClass]="{ inactive: activeCourse !== course.title }"
           >
-            Certificate
+            {{ "COURSES.BUTTON" | translate }}
           </button>
           <p class="text-light-purple text-left">
-            {{ course.date }}
+            {{ course.date | translate }}
             <br />
             {{ course.source }}
           </p>
@@ -109,10 +109,10 @@
             (click)="goToLink(course.link)"
             [ngClass]="{ inactive: activeCourse !== course.title }"
           >
-            Certificate
+            {{ "COURSES.BUTTON" | translate }}
           </button>
           <p class="text-light-purple">
-            {{ course.date }}
+            {{ course.date | translate }}
             <br />
             {{ course.source }}
           </p>
