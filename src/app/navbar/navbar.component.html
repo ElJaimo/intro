@@ -71,7 +71,7 @@
       inactive: !openNavbar,
     }"
   >
-    <div class="gap-y-4" [ngClass]="!openNavbar ? 'hidden' : 'flex'">
+    <div class="gap-y-8" [ngClass]="!openNavbar ? 'hidden' : 'flex'">
       <div class="nav-links-sm">
         <a
           class="nav-link__navbar"
@@ -98,6 +98,13 @@
           (click)="openNavbar = false"
           >{{ "NAVBAR.LINKS.PROJECTS" | translate }}</a
         >
+        <p
+          class="material-symbols-outlined utility-btn__navbar absolute -right-5 top-0"
+          [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
+          (click)="ChangeLang()"
+        >
+          translate
+        </p>
       </div>
     </div>
     <p
