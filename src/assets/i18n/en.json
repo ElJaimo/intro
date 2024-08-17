@@ -48,6 +48,7 @@
   "PROJECTS": {
     "TITLE1": "The work,",
     "TITLE2": "The projects",
+    "DESCRIPTION": "I believe that teamwork is fundamental not only for the workplace, so throughout my career I have constantly collaborated with my colleagues for the development of projects as well as my own skills.",
     "ORDER": {
       "LABEL": "Sort by:",
       "ALL": "All Projects",
@@ -58,19 +59,19 @@
     "BUTTON": "Live URL",
     "HYUNDAI": {
       "TITLE": "Hyundai Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Hyundai Singapore's website provides useful information on services and sales of its vehicles. <br /> Curretly, we update this website constantly to add new content."
     },
     "KOMOCO": {
       "TITLE": "Komoco",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Komoco Holdings Pte Ltd is a Singapore company that distributes and markets automobiles, acting as a dealer for various brands and offering maintenance and repair services."
     },
     "AUTOPAC": {
       "TITLE": "Komoco Autopac System",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Komoco Autopac System specializes in the sale of vehicle management systems and technology solutions for the automotive industry."
     },
     "CAPELLA": {
       "TITLE": "Capella Auto Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Capella Auto Singapore is a company engaged in the sale and distribution of vehicles in Singapore. <br /> We developed this website to schedule test drives."
     },
     "MASONRY": {
       "TITLE": "Freemasonry Singapore",
@@ -85,5 +86,5 @@
       "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
     }
   },
-  "FOOTER": "Made with Angular 17, Tailwind and passion 💜"
+  "FOOTER": "Made with Angular 17, Tailwind and no lollygagging 💜"
 }

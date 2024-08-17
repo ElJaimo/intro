@@ -107,6 +107,9 @@
     </div>
     <div class="section-container__experience">
       <div class="color-container__experience">
+        <p class="max-w-3xl text-center text-base-purple">
+          {{ "PROJECTS.DESCRIPTION" | translate }}
+        </p>
         <div class="section-container-inner__experience">
           <p class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
             {{ "PROJECTS.ORDER.LABEL" | translate
@@ -149,9 +152,10 @@
                   class="work-image"
                 />
               </figure>
-              <p class="text-xs text-justify text-base-purple">
-                {{ work.description | translate }}
-              </p>
+              <p
+                [innerHTML]="work.description | translate"
+                class="work-description__experience"
+              ></p>
               @if (work.link) {
               <button
                 class="red-button text-sm px-3 w-fit"
