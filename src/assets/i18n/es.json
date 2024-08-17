@@ -1,6 +1,7 @@
 {
   "MAIN-HERO": {
-    "GREETINGS1": "Hola",
-    "GREETINGS2": "soy"
+    "GREETINGS1": "Hello there",
+    "GREETINGS2": "soy",
+    "GREETINGS3": "Un Desarrollador Web"
   }
 }

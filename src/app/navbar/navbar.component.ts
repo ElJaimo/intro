@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -14,6 +14,9 @@ export class NavbarComponent implements OnInit {
   lockNavbar = true;
   pinNavbar = false;
   openNavbar = false;
+  enLang = true;
+
+  @Output() lang = new EventEmitter<boolean>();
 
   ngOnInit() {
     const navbar = document.getElementById('navbar-container')!;
@@ -28,5 +31,10 @@ export class NavbarComponent implements OnInit {
       { threshold: [1] }
     );
     observer.observe(navbar);
+  }
+
+  ChangeLang() {
+    this.enLang = !this.enLang;
+    this.lang.emit(this.enLang);
   }
 }

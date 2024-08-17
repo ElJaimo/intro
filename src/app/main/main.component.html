@@ -12,7 +12,9 @@
             >&gt;</span
           >
         </h1>
-        <p class="text-xl text-light-purple">A Web Developer</p>
+        <p class="text-xl text-light-purple">
+          {{ "MAIN-HERO.GREETINGS3" | translate }}
+        </p>
       </div>
       <img
         src="./assets/images/profile-photo.jpeg"
@@ -40,7 +42,7 @@
   </div>
 </section>
 <div id="content">
-  <app-navbar id="navbar"></app-navbar>
+  <app-navbar id="navbar" (lang)="ChangeLang($event)"></app-navbar>
   <section id="about-me" class="section-container__about">
     <div class="color-container__about">
       <div

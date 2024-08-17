@@ -34,7 +34,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     private intersectionObserverService: IntersectionObserverService,
     private translate: TranslateService
   ) {
-    this.translate.setDefaultLang('es');
+    this.translate.setDefaultLang('en');
   }
 
   ngOnInit() {
@@ -158,6 +158,14 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     },
   ];
   sortBy = 'all';
+
+  ChangeLang(enLang: boolean): void {
+    if (enLang) {
+      this.translate.use('en');
+    } else {
+      this.translate.use('es');
+    }
+  }
 
   goToLink(url: string, newPage = true): void {
     window.open(url, newPage ? '_blank' : '_self');
