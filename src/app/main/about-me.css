@@ -1,5 +1,5 @@
 .section-container__about {
-  background-image: url(/assets/images/backgrounds/background-3-mobile.webp);
+  background-image: url(../../assets/images/backgrounds/background-3-mobile.webp);
   background-attachment: fixed;
   background-color: var(--DARKER-PURPLE);
   background-position: center;
@@ -12,19 +12,19 @@
 
 @media (min-width: 425px) {
   .section-container__about {
-    background-image: url(/assets/images/backgrounds/background-3-tablet.webp);
+    background-image: url(../../assets/images/backgrounds/background-3-tablet.webp);
   }
 }
 
 @media (min-width: 1024px) {
   .section-container__about {
-    background-image: url(/assets/images/backgrounds/background-3-laptop.webp);
+    background-image: url(../../assets/images/backgrounds/background-3-laptop.webp);
   }
 }
 
 @media (min-width: 1440px) {
   .section-container__about {
-    background-image: url(/assets/images/backgrounds/background-3-desktop.webp);
+    background-image: url(../../assets/images/backgrounds/background-3-desktop.webp);
   }
 }
 

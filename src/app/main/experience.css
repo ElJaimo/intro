@@ -6,7 +6,7 @@
 }
 
 .section-container__experience {
-  background-image: url(/assets/images/backgrounds/background-5-mobile.webp);
+  background-image: url(../../assets/images/backgrounds/background-5-mobile.webp);
   background-attachment: fixed;
   background-color: var(--DARKER-PURPLE);
   background-position: center;
@@ -18,19 +18,19 @@
 
 @media (min-width: 425px) {
   .section-container__experience {
-    background-image: url(/assets/images/backgrounds/background-5-tablet.webp);
+    background-image: url(../../assets/images/backgrounds/background-5-tablet.webp);
   }
 }
 
 @media (min-width: 1024px) {
   .section-container__experience {
-    background-image: url(/assets/images/backgrounds/background-5-laptop.webp);
+    background-image: url(../../assets/images/backgrounds/background-5-laptop.webp);
   }
 }
 
 @media (min-width: 1440px) {
   .section-container__experience {
-    background-image: url(/assets/images/backgrounds/background-5-desktop.webp);
+    background-image: url(../../assets/images/backgrounds/background-5-desktop.webp);
   }
 }
 
