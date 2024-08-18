@@ -11,25 +11,27 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/intro",
+            "outputPath": "dist/src",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            },
-            "baseHref": "/intro/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -38,7 +40,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "3kb",
                   "maximumError": "4kb"
                 }
               ],
