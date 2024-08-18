@@ -37,13 +37,11 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     this.translate.setDefaultLang('en');
   }
 
-  ngOnInit() {
-    document.getElementById('type-out-content')?.classList.add('typing');
-    setTimeout(() => (this.letter = 'e'), 1350);
-  }
+  ngOnInit() {}
 
   ngAfterViewInit(): void {
-    console.log(this.SkillsSection);
+    document.getElementById('type-out-content')?.classList.add('typing');
+    setTimeout(() => (this.letter = 'e'), 1350);
     if (this.SkillsSection) {
       this.intersectionObserverService.observe(
         this.SkillsSection.nativeElement
