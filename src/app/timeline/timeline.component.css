@@ -123,15 +123,41 @@
 
 .icon-container__courses {
   align-items: center;
-  animation-fill-mode: both;
-  animation-name: show-icon;
-  animation-range: 0% cover 100%;
-  animation-timeline: --reveal;
   display: flex;
   height: 5.5rem;
   justify-content: center;
-  view-timeline-name: --reveal;
   @apply w-20;
+}
+
+@supports (animation-range: 0% cover 100%) {
+  .icon-container__courses {
+    animation-fill-mode: both;
+    animation-name: show-icon;
+    animation-range: 0% cover 100%;
+    animation-timeline: --reveal;
+    view-timeline-name: --reveal;
+  }
+}
+
+@supports not (animation-range: 0% cover 100%) {
+  .icon-container__courses {
+    width: 5rem;
+    animation-name: glow-img;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes glow-img {
+  from {
+    filter: drop-shadow(0 0 5px var(--DARKER-PURPLE));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px var(--LIGHTER-PURPLE));
+  }
+  to {
+    filter: drop-shadow(0 0 5px var(--DARKER-PURPLE));
+  }
 }
 
 @keyframes show-icon {
