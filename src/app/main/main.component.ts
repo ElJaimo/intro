@@ -63,7 +63,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 'linkedin',
       title: 'MAIN-HERO.NETWORKS.LINKEDIN',
-      svg: '/assets/icons/linkedin-icon.svg',
+      svg: 'assets/icons/linkedin-icon.svg',
       classes: 'h-7',
       Fclasses: 'h-6',
       link: 'https://www.linkedin.com/in/jaime-albarran-61933b17b',
@@ -71,7 +71,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 'github',
       title: 'MAIN-HERO.NETWORKS.GITHUB',
-      svg: '/assets/icons/github-icon.svg',
+      svg: 'assets/icons/github-icon.svg',
       classes: 'h-7',
       Fclasses: 'h-6',
       link: 'https://github.com/ElJaimo',
@@ -79,7 +79,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 'mail',
       title: 'MAIN-HERO.NETWORKS.EMAIL',
-      svg: '/assets/icons/mail-icon.svg',
+      svg: 'assets/icons/mail-icon.svg',
       classes: 'h-6',
       Fclasses: 'h-5',
       link: 'mailto:hawk_1036@live.com.mx',

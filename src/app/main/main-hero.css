@@ -1,6 +1,6 @@
 .section-container__main {
   background-color: var(--DARKER-PURPLE);
-  background-image: url(/assets/images/backgrounds/background-1-mobile.webp);
+  background-image: url(/./assets/images/backgrounds/background-1-mobile.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
 
 @media (min-width: 425px) {
   .section-container__main {
-    background-image: url(/assets/images/backgrounds/background-1-tablet.webp);
+    background-image: url(/./assets/images/backgrounds/background-1-tablet.webp);
   }
   .intro-hero__main {
     left: 60%;
@@ -20,13 +20,13 @@
 
 @media screen and (min-width: 1024px) {
   .section-container__main {
-    background-image: url(/assets/images/backgrounds/background-1-laptop.webp);
+    background-image: url(/./assets/images/backgrounds/background-1-laptop.webp);
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section-container__main {
-    background-image: url(/assets/images/backgrounds/background-1-desktop.webp);
+    background-image: url(/./assets/images/backgrounds/background-1-desktop.webp);
   }
 }
 
