@@ -58,8 +58,11 @@
           <p class="text-light-purple mb-5 text-justify md:text-left">
             {{ "ABOUT-ME.CONTENT" | translate }}
           </p>
-          <button class="link-button block px-7 text-lg mx-auto md:ml-0">
-            {{ "ABOUT-ME.BUTTON" | translate }}
+          <button
+            class="link-button block px-7 text-lg mx-auto md:ml-0"
+            (click)="downloadPDF()"
+          >
+            {{ "ABOUT-ME.RESUME" | translate }}
           </button>
         </div>
       </div>

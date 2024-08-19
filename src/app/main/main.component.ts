@@ -35,6 +35,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     private translate: TranslateService
   ) {
     this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   ngOnInit() {}
@@ -156,6 +157,22 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     } else {
       this.translate.use('es');
     }
+  }
+
+  downloadPDF(): void {
+    let pdfName = '';
+    if (this.translate.currentLang == 'en') {
+      pdfName = 'Curriculum-Vitae-EN.pdf';
+    } else if (this.translate.currentLang == 'es') {
+      pdfName = 'Curriculum-Vitae-ES.pdf';
+    }
+    const pdfUrl = 'assets/' + pdfName;
+    const a = document.createElement('a');
+    a.href = pdfUrl;
+    a.download = pdfName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }
 
   goToLink(url: string, newPage = true): void {
