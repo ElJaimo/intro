@@ -75,15 +75,15 @@
     },
     "MASONRY": {
       "TITLE": "Freemasonry Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "The Grand Lodge of Singapore provides an overview of Freemasonry in the region. <br /> It highlights the history of the organization and the principles governing the fraternity."
     },
     "SAVAGE": {
       "TITLE": "Savage Club Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "The Savage Club Singapore is a private and exclusive organization dedicated to providing a space for social interaction, networking and professional development."
     },
     "IFYNI": {
       "TITLE": "Ifyni Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Ifyni Singapore is a company specializing in the sale of motorcycles and related accessories from partner brands in Singapore. <br /> Their website offers a clear overview of their brand catalog."
     }
   },
   "FOOTER": "Made with Angular 17, Tailwind and no lollygagging 💜"

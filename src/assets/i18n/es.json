@@ -59,31 +59,31 @@
     "BUTTON": "Abrir URL",
     "HYUNDAI": {
       "TITLE": "Hyundai Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "El sitio web de Hyundai Singapur ofrece información útil sobre los servicios y la venta de sus vehículos.<br />Actualmente, nos encargamos de actualizar este sitio web constantemente para añadir nuevo contenido."
     },
     "KOMOCO": {
       "TITLE": "Komoco",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Komoco Holdings Pte Ltd es una empresa de Singapur que distribuye y comercializa automóviles, actuando como concesionario de varias marcas, ofreciendo servicios de mantenimiento y reparación."
     },
     "AUTOPAC": {
       "TITLE": "Komoco Autopac System",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Komoco Autopac System está especializada en la venta de sistemas de gestión de vehículos y soluciones tecnológicas para la industria del automóvil."
     },
     "CAPELLA": {
       "TITLE": "Capella Auto Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Capella Auto Singapore es una empresa dedicada a la venta y distribución de vehículos en Singapur.<br />Hemos desarrollado este sitio web para programar pruebas de conducción."
     },
     "MASONRY": {
       "TITLE": "Freemasonry Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "La Gran Logia de Singapur ofrece una visión general de la masonería en la región.<br />Destaca la historia de la organización así como los principios que rigen la fraternidad."
     },
     "SAVAGE": {
       "TITLE": "Savage Club Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "El Savage Club Singapore es una organización privada y exclusiva dedicada a proporcionar un espacio para la interacción social, la creación de redes y el desarrollo profesional."
     },
     "IFYNI": {
       "TITLE": "Ifyni Singapore",
-      "DESCRIPTION": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A esse repudiandae fugiat maiores soluta nesciunt provident quas dolores, tempora et, deleniti, reiciendis vitae!"
+      "DESCRIPTION": "Ifyni Singapore es una empresa especializada en la venta de motocicletas y accesorios relacionados de marcas asociadas en Singapur. Su sitio web ofrece una visión clara de su catálogo de marcas."
     }
   },
   "FOOTER": "Hecho con Angular 17, Tailwind y echandole ganas 💜"

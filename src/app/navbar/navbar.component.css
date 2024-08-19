@@ -59,6 +59,7 @@
   color: var(--DARKER-PURPLE);
   position: relative;
   transition: color 0.4s ease;
+  cursor: pointer;
 }
 
 .nav-link__navbar:hover {
