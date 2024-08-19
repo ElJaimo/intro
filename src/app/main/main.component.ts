@@ -11,12 +11,19 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { IntersectionObserverService } from '../intersection-observer.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   standalone: true,
-  imports: [NgClass, NavbarComponent, TimelineComponent, TranslateModule],
+  imports: [
+    NgClass,
+    NavbarComponent,
+    TimelineComponent,
+    TranslateModule,
+    RouterLink,
+  ],
   styleUrls: [
     './main-hero.css',
     'about-me.css',
@@ -32,7 +39,8 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     private intersectionObserverService: IntersectionObserverService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private router: Router
   ) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
@@ -157,6 +165,19 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     } else {
       this.translate.use('es');
     }
+  }
+
+  navigateToSection(section: string) {
+    this.router
+      .navigate([], {
+        fragment: section,
+      })
+      .then(() => {
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
   }
 
   downloadPDF(): void {

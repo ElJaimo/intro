@@ -1,214 +1,219 @@
-<section id="main-hero" class="section-container__main">
-  <div class="color-container__main">
-    <div class="intro-hero__main">
-      <div class="text-center md:text-right">
-        <h1 class="text-5xl text-lighter-purple mb-4 leading-tight">
-          {{ "MAIN-HERO.GREETINGS1" | translate }} <br />
-          {{ "MAIN-HERO.GREETINGS2" | translate }}
-          <span id="type-out-content" class="type-out__main"
-            >&lt;Jaim<span>{{ letter }}</span
-            >&gt;</span
-          >
-        </h1>
-        <p class="text-xl text-light-purple">
-          {{ "MAIN-HERO.GREETINGS3" | translate }}
-        </p>
-      </div>
-      <img
-        src="./assets/images/profile-photo.jpeg"
-        alt="Profile photo"
-        class="profile-photo__main"
-      />
-    </div>
-    <div class="grid grid-cols-3 items-end gap-2 absolute top-4 left-4">
-      @for (network of networksLinks; track network.title) {
-      <img
-        [src]="network.svg"
-        [alt]="network.id"
-        [title]="network.title | translate"
-        (click)="goToLink(network.link)"
-        [class]="network.classes"
-        class="network-icon__main"
-      />
-      }
-    </div>
-    <a class="scroll-button__main" href="#content">
-      <span class="material-symbols-outlined text-2xl animate-pulse">
-        &#xe5db;
-      </span>
-    </a>
-  </div>
-</section>
-<div id="content">
-  <app-navbar id="navbar" (lang)="ChangeLang($event)"></app-navbar>
-  <section id="about-me" class="section-container__about">
-    <div class="color-container__about">
-      <div
-        class="flex flex-col md:flex-row gap-12 justify-center items-center h-fit"
-      >
+<main class="main-container">
+  <section id="main-hero" class="section-container__main">
+    <div class="color-container__main">
+      <div class="intro-hero__main">
+        <div class="text-center md:text-right">
+          <h1 class="text-5xl text-lighter-purple mb-4 leading-tight">
+            {{ "MAIN-HERO.GREETINGS1" | translate }} <br />
+            {{ "MAIN-HERO.GREETINGS2" | translate }}
+            <span id="type-out-content" class="type-out__main"
+              >&lt;Jaim<span>{{ letter }}</span
+              >&gt;</span
+            >
+          </h1>
+          <p class="text-xl text-light-purple">
+            {{ "MAIN-HERO.GREETINGS3" | translate }}
+          </p>
+        </div>
         <img
-          class="about-me-photo__about"
-          src=".\assets\images\about-me-photo.jpeg"
-          alt="about-me-photo"
+          src="./assets/images/profile-photo.jpeg"
+          alt="Profile photo"
+          class="profile-photo__main"
         />
-        <div class="max-w-72">
-          <h2 class="text-lighter-purple mb-5 text-center md:text-left">
-            {{ "ABOUT-ME.TITLE" | translate }}
-          </h2>
-          <p class="text-light-purple mb-5 text-justify md:text-left">
-            {{ "ABOUT-ME.CONTENT" | translate }}
-          </p>
-          <button
-            class="link-button block px-7 text-lg mx-auto md:ml-0"
-            (click)="downloadPDF()"
-          >
-            {{ "ABOUT-ME.RESUME" | translate }}
-          </button>
-        </div>
       </div>
-    </div>
-  </section>
-  <section #SkillsSection id="skills" class="section-container__skills">
-    <div class="max-w-3xl px-5 mx-auto text-center">
-      <h2 class="text-darker-purple mb-10">
-        {{ "SKILLS.TITLE1" | translate }} <br />
-        {{ "SKILLS.TITLE2" | translate }}
-      </h2>
-      <p class="text-dark-purple mb-10">
-        {{ "SKILLS.CONTENT1" | translate }}
-        <br />
-        {{ "SKILLS.CONTENT2" | translate }}
-      </p>
-      <div
-        class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
-      >
-        @for (skill of skills; track $index) {
-        <p class="skill-item__skills">{{ skill }}</p>
-        }
-      </div>
-    </div>
-  </section>
-  <section id="courses" class="section-container__courses">
-    <div class="color-container__courses">
-      <div class="max-w-3xl px-5 mx-auto text-center md:text-left">
-        <h2 class="text-lighter-purple mb-10">
-          {{ "COURSES.TITLE" | translate }}
-        </h2>
-        <p class="text-light-purple mb-14">
-          {{ "COURSES.CONTENT" | translate }}
-        </p>
-        <app-timeline />
-      </div>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="section-title__experience">
-      <h2 class="w-fit mx-auto">
-        {{ "PROJECTS.TITLE1" | translate }}<br />
-        {{ "PROJECTS.TITLE2" | translate }}
-      </h2>
-    </div>
-    <div class="section-container__experience">
-      <div class="color-container__experience">
-        <p class="max-w-3xl text-center text-base-purple">
-          {{ "PROJECTS.DESCRIPTION" | translate }}
-        </p>
-        <div class="section-container-inner__experience">
-          <p class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
-            {{ "PROJECTS.ORDER.LABEL" | translate
-            }}<span
-              class="sort-button"
-              [ngClass]="{ 'font-bold': sortBy == 'all' }"
-              (click)="sortBy = 'all'"
-              >{{ "PROJECTS.ORDER.ALL" | translate }}</span
-            >
-            <span
-              class="sort-button"
-              [ngClass]="{ 'font-bold': sortBy == 'company' }"
-              (click)="sortBy = 'company'"
-              >{{ "PROJECTS.ORDER.COMPANY" | translate }}</span
-            >
-            <span
-              class="sort-button"
-              [ngClass]="{ 'font-bold': sortBy == 'personal' }"
-              (click)="sortBy = 'personal'"
-              >{{ "PROJECTS.ORDER.PERSONAL" | translate }}</span
-            >
-          </p>
-          <div class="experience-container__experience">
-            @if (sortExperience(experience).length == 0) {
-            <p class="text-light-purple">
-              {{ "PROJECTS.ORDER.SOON" | translate }}
-            </p>
-            } @else { @for (work of sortExperience(experience); track $index) {
-            <div
-              class="experience-item__experience"
-              (mouseenter)="hoveringWork(work.image)"
-              (mouseleave)="hoveringWork(work.image)"
-            >
-              <h3 class="text-lighter-purple">{{ work.title | translate }}</h3>
-              @if (work.link) {
-              <figure (click)="goToLink(work.link)" class="work-figure">
-                <img
-                  [src]="'assets/images/' + work.image"
-                  [id]="work.image"
-                  [alt]="work.title"
-                  class="work-image"
-                />
-              </figure>
-              } @else {
-              <figure class="work-figure">
-                <img
-                  [src]="'assets/images/' + work.image"
-                  [id]="work.image"
-                  [alt]="work.title"
-                  class="work-image"
-                />
-              </figure>
-              }
-              <p
-                [innerHTML]="work.description | translate"
-                class="work-description__experience"
-              ></p>
-              @if (work.link) {
-              <button
-                class="red-button text-sm px-3 w-fit"
-                (click)="goToLink(work.link)"
-              >
-                {{ "PROJECTS.BUTTON" | translate }}
-              </button>
-              }
-            </div>
-            } }
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<footer>
-  <div class="footer-container__footer">
-    <div class="h-fit self-end">
-      <div class="grid grid-cols-3 items-end gap-1 w-fit mx-auto md:ml-0">
+      <div class="grid grid-cols-3 items-end gap-2 absolute top-4 left-4">
         @for (network of networksLinks; track network.title) {
         <img
           [src]="network.svg"
           [alt]="network.id"
           [title]="network.title | translate"
           (click)="goToLink(network.link)"
-          [class]="network.Fclasses"
-          class="network-icon__footer"
+          [class]="network.classes"
+          class="network-icon__main"
         />
         }
       </div>
-      <p class="text-xs text-base-purple mt-3">
-        {{ "FOOTER" | translate }}
-      </p>
+      <a class="scroll-button__main" (click)="navigateToSection('content')">
+        <span class="material-symbols-outlined text-2xl animate-pulse">
+          &#xe5db;
+        </span>
+      </a>
     </div>
-    <img
-      src="assets/logos/slogan_dark.png"
-      alt="slogan-img"
-      class="hidden md:block h-full"
-    />
-  </div>
-</footer>
+  </section>
+  <section id="content" class="snap-start">
+    <app-navbar id="navbar" (lang)="ChangeLang($event)"></app-navbar>
+    <section id="about-me" class="section-container__about">
+      <div class="color-container__about">
+        <div
+          class="flex flex-col md:flex-row gap-12 justify-center items-center h-fit"
+        >
+          <img
+            class="about-me-photo__about"
+            src=".\assets\images\about-me-photo.jpeg"
+            alt="about-me-photo"
+          />
+          <div class="max-w-72">
+            <h2 class="text-lighter-purple mb-5 text-center md:text-left">
+              {{ "ABOUT-ME.TITLE" | translate }}
+            </h2>
+            <p class="text-light-purple mb-5 text-justify md:text-left">
+              {{ "ABOUT-ME.CONTENT" | translate }}
+            </p>
+            <button
+              class="link-button block px-7 text-lg mx-auto md:ml-0"
+              (click)="downloadPDF()"
+            >
+              {{ "ABOUT-ME.RESUME" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section #SkillsSection id="skills" class="section-container__skills">
+      <div class="max-w-3xl px-5 mx-auto text-center">
+        <h2 class="text-darker-purple mb-10">
+          {{ "SKILLS.TITLE1" | translate }} <br />
+          {{ "SKILLS.TITLE2" | translate }}
+        </h2>
+        <p class="text-dark-purple mb-10">
+          {{ "SKILLS.CONTENT1" | translate }}
+          <br />
+          {{ "SKILLS.CONTENT2" | translate }}
+        </p>
+        <div
+          class="flex flex-wrap gap-x-8 gap-y-6 justify-center max-w-2xl mx-auto px-5"
+        >
+          @for (skill of skills; track $index) {
+          <p class="skill-item__skills">{{ skill }}</p>
+          }
+        </div>
+      </div>
+    </section>
+    <section id="courses" class="section-container__courses">
+      <div class="color-container__courses">
+        <div class="max-w-3xl px-5 mx-auto text-center md:text-left">
+          <h2 class="text-lighter-purple mb-10">
+            {{ "COURSES.TITLE" | translate }}
+          </h2>
+          <p class="text-light-purple mb-14">
+            {{ "COURSES.CONTENT" | translate }}
+          </p>
+          <app-timeline />
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="section-title__experience">
+        <h2 class="w-fit mx-auto">
+          {{ "PROJECTS.TITLE1" | translate }}<br />
+          {{ "PROJECTS.TITLE2" | translate }}
+        </h2>
+      </div>
+      <div class="section-container__experience">
+        <div class="color-container__experience">
+          <p class="max-w-3xl text-center text-base-purple">
+            {{ "PROJECTS.DESCRIPTION" | translate }}
+          </p>
+          <div class="section-container-inner__experience">
+            <p class="px-5 mx-auto mb-7 sm:mb-5 text-base-purple text-sm">
+              {{ "PROJECTS.ORDER.LABEL" | translate
+              }}<span
+                class="sort-button"
+                [ngClass]="{ 'font-bold': sortBy == 'all' }"
+                (click)="sortBy = 'all'"
+                >{{ "PROJECTS.ORDER.ALL" | translate }}</span
+              >
+              <span
+                class="sort-button"
+                [ngClass]="{ 'font-bold': sortBy == 'company' }"
+                (click)="sortBy = 'company'"
+                >{{ "PROJECTS.ORDER.COMPANY" | translate }}</span
+              >
+              <span
+                class="sort-button"
+                [ngClass]="{ 'font-bold': sortBy == 'personal' }"
+                (click)="sortBy = 'personal'"
+                >{{ "PROJECTS.ORDER.PERSONAL" | translate }}</span
+              >
+            </p>
+            <div class="experience-container__experience">
+              @if (sortExperience(experience).length == 0) {
+              <p class="text-light-purple">
+                {{ "PROJECTS.ORDER.SOON" | translate }}
+              </p>
+              } @else { @for (work of sortExperience(experience); track $index)
+              {
+              <div
+                class="experience-item__experience"
+                (mouseenter)="hoveringWork(work.image)"
+                (mouseleave)="hoveringWork(work.image)"
+              >
+                <h3 class="text-lighter-purple">
+                  {{ work.title | translate }}
+                </h3>
+                @if (work.link) {
+                <figure (click)="goToLink(work.link)" class="work-figure">
+                  <img
+                    [src]="'assets/images/' + work.image"
+                    [id]="work.image"
+                    [alt]="work.title"
+                    class="work-image"
+                  />
+                </figure>
+                } @else {
+                <figure class="work-figure">
+                  <img
+                    [src]="'assets/images/' + work.image"
+                    [id]="work.image"
+                    [alt]="work.title"
+                    class="work-image"
+                  />
+                </figure>
+                }
+                <p
+                  [innerHTML]="work.description | translate"
+                  class="work-description__experience"
+                ></p>
+                @if (work.link) {
+                <button
+                  class="red-button text-sm px-3 w-fit"
+                  (click)="goToLink(work.link)"
+                >
+                  {{ "PROJECTS.BUTTON" | translate }}
+                </button>
+                }
+              </div>
+              } }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container__footer">
+        <div class="h-fit self-end">
+          <div class="grid grid-cols-3 items-end gap-1 w-fit mx-auto md:ml-0">
+            @for (network of networksLinks; track network.title) {
+            <img
+              [src]="network.svg"
+              [alt]="network.id"
+              [title]="network.title | translate"
+              (click)="goToLink(network.link)"
+              [class]="network.Fclasses"
+              class="network-icon__footer"
+            />
+            }
+          </div>
+          <p class="text-xs text-base-purple mt-3">
+            {{ "FOOTER" | translate }}
+          </p>
+        </div>
+        <img
+          src="assets/logos/slogan_dark.png"
+          alt="slogan-img"
+          class="hidden md:block h-full"
+        />
+      </div>
+    </footer>
+  </section>
+</main>

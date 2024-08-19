@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  scroll-snap-align: start;
   width: 100vw;
 }
 
@@ -109,6 +110,7 @@
   align-items: center;
   background-color: white;
   bottom: 0.5rem;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   left: 50%;
