@@ -60,7 +60,7 @@
 </nav>
 <div
   [ngClass]="openNavbar ? 'block' : 'hidden'"
-  class="absolute bg-black opacity-50 w-screen h-screen top-0 z-10"
+  class="absolute bg-black opacity-50 w-screen h-screen top-0 z-10 block md:hidden"
   (click)="openNavbar = false"
   (scroll)="openNavbar = false"
 ></div>
@@ -71,48 +71,45 @@
       inactive: !openNavbar,
     }"
   >
-    <div class="gap-y-8" [ngClass]="!openNavbar ? 'hidden' : 'flex'">
-      <div class="nav-links-sm">
-        <a
-          class="nav-link__navbar"
-          (click)="openNavbar = false"
-          [routerLink]="['/']"
-          fragment="about-me"
-          >{{ "NAVBAR.LINKS.ABOUT" | translate }}</a
-        >
-        <a
-          href="#skills"
-          class="nav-link__navbar"
-          (click)="openNavbar = false"
-          >{{ "NAVBAR.LINKS.SKILLS" | translate }}</a
-        >
-        <a
-          href="#courses"
-          class="nav-link__navbar"
-          (click)="openNavbar = false"
-          >{{ "NAVBAR.LINKS.COURSES" | translate }}</a
-        >
-        <a
-          href="#projects"
-          class="nav-link__navbar"
-          (click)="openNavbar = false"
-          >{{ "NAVBAR.LINKS.PROJECTS" | translate }}</a
-        >
-        <p
-          class="material-symbols-outlined utility-btn__navbar absolute -right-5 top-0"
-          [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
-          (click)="ChangeLang()"
-        >
-          translate
-        </p>
-      </div>
+    @if (openNavbar) {
+    <div class="nav-links-sm">
+      <a
+        class="nav-link__navbar"
+        (click)="openNavbar = false"
+        [routerLink]="['/']"
+        fragment="about-me"
+        >{{ "NAVBAR.LINKS.ABOUT" | translate }}</a
+      >
+      <a href="#skills" class="nav-link__navbar" (click)="openNavbar = false">{{
+        "NAVBAR.LINKS.SKILLS" | translate
+      }}</a>
+      <a
+        href="#courses"
+        class="nav-link__navbar"
+        (click)="openNavbar = false"
+        >{{ "NAVBAR.LINKS.COURSES" | translate }}</a
+      >
+      <a
+        href="#projects"
+        class="nav-link__navbar"
+        (click)="openNavbar = false"
+        >{{ "NAVBAR.LINKS.PROJECTS" | translate }}</a
+      >
+      <p
+        class="material-symbols-outlined utility-btn__navbar absolute left-4 top-0"
+        [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
+        (click)="ChangeLang()"
+      >
+        translate
+      </p>
     </div>
+    } @else {
     <p
       class="material-symbols-outlined text-4xl text-darker-purple"
-      [ngClass]="openNavbar ? 'hidden' : 'block'"
       (click)="openNavbar = true"
     >
       add
     </p>
+    }
   </div>
 </nav>

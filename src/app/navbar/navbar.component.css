@@ -43,7 +43,7 @@
 
   .navbar-container__inner.inactive {
     width: 15%;
-    min-width: 150px;
+    min-width: 200px;
     justify-content: space-between;
     @apply pr-8;
   }
@@ -115,7 +115,7 @@
   top: 1rem;
   transition: all 0.4s ease;
   z-index: 11;
-  @apply py-8 w-44 rounded-3xl;
+  @apply py-8 w-fit rounded-3xl;
 }
 
 .navbar-container-sm__inner.inactive {
@@ -126,8 +126,8 @@
 
 .nav-links-sm {
   position: relative;
-  align-items: center;
+  align-items: end;
   display: flex;
   flex-direction: column;
-  @apply gap-10 text-lg;
+  @apply gap-10 text-lg pl-7 pr-5;
 }
