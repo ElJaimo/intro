@@ -36,7 +36,7 @@
   cursor: pointer;
   transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  @apply h-4/5 cursor-pointer brightness-125 hover:brightness-200;
+  @apply h-4/5 cursor-default brightness-125 hover:brightness-200;
 }
 
 @media (min-width: 768px) {

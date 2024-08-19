@@ -147,6 +147,7 @@
               (mouseleave)="hoveringWork(work.image)"
             >
               <h3 class="text-lighter-purple">{{ work.title | translate }}</h3>
+              @if (work.link) {
               <figure (click)="goToLink(work.link)" class="work-figure">
                 <img
                   [src]="'assets/images/' + work.image"
@@ -155,6 +156,16 @@
                   class="work-image"
                 />
               </figure>
+              } @else {
+              <figure class="work-figure">
+                <img
+                  [src]="'assets/images/' + work.image"
+                  [id]="work.image"
+                  [alt]="work.title"
+                  class="work-image"
+                />
+              </figure>
+              }
               <p
                 [innerHTML]="work.description | translate"
                 class="work-description__experience"

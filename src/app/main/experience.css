@@ -101,7 +101,7 @@
 .work-image {
   height: 150px;
   position: relative;
-  @apply transition-colors;
+  transition: filter 0.3s ease;
 }
 
 .work-image:hover {
