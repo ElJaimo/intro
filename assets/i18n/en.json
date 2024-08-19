@@ -25,7 +25,7 @@
   "ABOUT-ME": {
     "TITLE": "A little about me",
     "CONTENT": "I am a physics engineer and a varied technician who ended up working as web developer. I love cooking, drawing and minecraft.",
-    "BUTTON": "Resume"
+    "RESUME": "Resume"
   },
   "SKILLS": {
     "TITLE1": "Looking for a developer?",
