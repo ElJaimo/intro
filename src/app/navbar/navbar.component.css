@@ -126,7 +126,7 @@
 
 .nav-links-sm {
   position: relative;
-  align-items: end;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
   @apply gap-10 text-lg pl-7 pr-5;

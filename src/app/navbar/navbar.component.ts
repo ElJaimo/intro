@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterLink, Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +19,8 @@ export class NavbarComponent implements OnInit {
 
   @Output() lang = new EventEmitter<boolean>();
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     const navbar = document.getElementById('navbar-container')!;
     const observer = new IntersectionObserver(
@@ -32,6 +34,20 @@ export class NavbarComponent implements OnInit {
       { threshold: [1] }
     );
     observer.observe(navbar);
+  }
+
+  navigateToSection(section: string) {
+    this.openNavbar = false;
+    this.router
+      .navigate([], {
+        fragment: section,
+      })
+      .then(() => {
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
   }
 
   ChangeLang() {
