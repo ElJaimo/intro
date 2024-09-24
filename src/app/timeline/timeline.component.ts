@@ -67,6 +67,14 @@ export class TimelineComponent implements OnInit {
       iconWidth: 'w-20',
       link: 'https://coursera.org/share/395b93f5624677d13070fffd63661de5',
     },
+    {
+      title: 'Developing Frontend Apps with React',
+      date: 'COURSES.DATES.SEP',
+      source: 'IBM',
+      icon: 'react-icon.png',
+      iconWidth: 'w-20',
+      link: 'https://coursera.org/share/cdc7b08375f88e51e1970a26e2b0b03a',
+    },
   ];
   activeCourse = '';
 
