@@ -75,6 +75,14 @@ export class TimelineComponent implements OnInit {
       iconWidth: 'w-20',
       link: 'https://coursera.org/share/cdc7b08375f88e51e1970a26e2b0b03a',
     },
+    {
+      title: 'Intermediate Web and Front-End Development',
+      date: 'COURSES.DATES.OCT',
+      source: 'IBM',
+      icon: 'intermediate-icon.png',
+      iconWidth: 'w-20',
+      link: 'https://coursera.org/share/df753add08d9e90e524a6f2c78d40ade',
+    },
   ];
   activeCourse = '';
 

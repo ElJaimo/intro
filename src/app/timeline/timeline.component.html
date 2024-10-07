@@ -82,7 +82,7 @@
     }
   </div>
   <div class="courses-container__courses last">
-    @for (course of courses.slice(6,8); track $index) {
+    @for (course of courses.slice(6,9); track $index) {
     <div
       class="course-container__courses left flex-row-reverse"
       [ngClass]="{ active: activeCourse == course.title }"
