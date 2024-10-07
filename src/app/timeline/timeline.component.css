@@ -97,7 +97,7 @@
   align-items: center;
   display: flex;
   position: relative;
-  @apply gap-x-4;
+  @apply gap-x-4 rounded-lg p-1;
 }
 
 .course-container__courses::before {
@@ -164,7 +164,7 @@
   from {
     width: 0;
   }
-  35% {
+  40% {
     width: 5rem;
   }
   75% {
