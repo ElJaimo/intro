@@ -66,16 +66,16 @@
 
 .courses-container__courses.last::before {
   border-color: var(--LIGHT-PURPLE);
-  border-width: 2px 2px 0 0;
+  border-width: 2px 0 0 2px;
   bottom: 0;
   content: "";
   display: block;
   height: calc(100% + 2px);
   position: absolute;
-  right: 0;
+  left: 0;
   width: 50%;
   z-index: -5;
-  @apply rounded-tr-2xl;
+  @apply rounded-tl-2xl;
 }
 
 .courses-container__courses.last::after {
@@ -86,9 +86,9 @@
   border-width: 2px;
   border-color: var(--LIGHT-PURPLE);
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  transform: translate(44%, 98%);
+  transform: translate(-44%, 98%);
   @apply text-4xl rounded-full;
 }
 

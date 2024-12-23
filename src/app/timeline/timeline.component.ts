@@ -83,6 +83,14 @@ export class TimelineComponent implements OnInit {
       iconWidth: 'w-20',
       link: 'https://coursera.org/share/df753add08d9e90e524a6f2c78d40ade',
     },
+    {
+      title: 'Get Started with Cloud Native, DevOps, Agile, and NoSQL',
+      date: 'COURSES.DATES.DEC',
+      source: 'IBM',
+      icon: 'devops-icon.png',
+      iconWidth: 'w-20',
+      link: 'https://coursera.org/share/95373fef0de6171538b37c5d2464c39b',
+    },
   ];
   activeCourse = '';
 
