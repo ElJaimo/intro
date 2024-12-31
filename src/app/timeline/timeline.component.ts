@@ -91,6 +91,14 @@ export class TimelineComponent implements OnInit {
       iconWidth: 'w-20',
       link: 'https://coursera.org/share/95373fef0de6171538b37c5d2464c39b',
     },
+    {
+      title: 'Front-End Development Capstone Project',
+      date: 'COURSES.DATES.DEC',
+      source: 'IBM',
+      icon: 'capstone-icon.png',
+      iconWidth: 'w-20',
+      link: 'https://coursera.org/share/24fa75ffbfde7589af810b8a5d099dee',
+    },
   ];
   activeCourse = '';
 

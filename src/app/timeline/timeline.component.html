@@ -125,7 +125,7 @@
     }
   </div>
   <div class="courses-container__courses last text-left">
-    @for (course of courses.slice(-1); track $index) {
+    @for (course of courses.slice(9); track $index) {
     <div
       class="course-container__courses right"
       [ngClass]="{ active: activeCourse == course.title }"
