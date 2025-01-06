@@ -1,11 +1,24 @@
 <div class="timeline-container__courses">
-  <div class="courses-container__courses first">
-    @for (course of courses.slice(0,3); track $index) {
+  @for (courseSet of splitCourseSets; track courseSet; let outerIdx = $index) {
+  <div
+    class="courses-container__courses"
+    [class]="
+      outerIdx == 0
+        ? 'first'
+        : outerIdx == splitCourseSets.length - 1
+        ? 'last'
+        : outerIdx % 2 == 0
+        ? 'right'
+        : 'left text-left'
+    "
+  >
+    @for (course of courseSet; track course; let innerIdx = $index) {
     <div
-      class="course-container__courses left flex-row-reverse"
+      class="course-container__courses"
+      [class]="outerIdx % 2 == 0 ? 'left flex-row-reverse' : 'right'"
       [ngClass]="{
         active: activeCourse == course.title,
-        'bg-slate-600/40 border-slate-700 border': $index == 0
+        'bg-slate-600/40 border-slate-700 border': course.professional
       }"
       (mouseenter)="activeCourse = course.title"
       (mouseleave)="activeCourse = ''"
@@ -23,7 +36,8 @@
         </h3>
         <div
           class="flex items-center text-sm justify-between"
-          [ngClass]="
+          [ngClass]="{ 'flex-row-reverse': outerIdx % 2 !== 0 }"
+          [class]="
             activeCourse == course.title ? 'justify-between' : 'justify-end'
           "
         >
@@ -34,47 +48,10 @@
           >
             {{ "COURSES.BUTTON" | translate }}
           </button>
-          <p class="text-light-purple">
-            {{ course.date | translate }}
-            <br />
-            {{ course.source }}
-          </p>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
-  <div class="courses-container__courses left text-left">
-    @for (course of courses.slice(3,6); track $index) {
-    <div
-      class="course-container__courses right"
-      [ngClass]="{ active: activeCourse == course.title }"
-      (mouseenter)="activeCourse = course.title"
-      (mouseleave)="activeCourse = ''"
-    >
-      <figure
-        class="icon-container__courses"
-        [ngClass]="{ inactive: activeCourse !== course.title }"
-      >
-        <img
-          [src]="'assets/icons/' + course.icon"
-          [alt]="course.title"
-          [ngClass]="course.iconWidth"
-        />
-      </figure>
-      <div>
-        <h3 class="text-lighter-purple">
-          {{ course.title }}
-        </h3>
-        <div class="flex items-center flex-row-reverse text-sm justify-between">
-          <button
-            class="link-button h-fit px-3"
-            (click)="goToLink(course.link)"
-            [ngClass]="{ inactive: activeCourse !== course.title }"
+          <p
+            class="text-light-purple"
+            [ngClass]="{ 'text-left': outerIdx % 2 !== 0 }"
           >
-            {{ "COURSES.BUTTON" | translate }}
-          </button>
-          <p class="text-light-purple text-left">
             {{ course.date | translate }}
             <br />
             {{ course.source }}
@@ -84,84 +61,5 @@
     </div>
     }
   </div>
-  <div class="courses-container__courses right">
-    @for (course of courses.slice(6,9); track $index) {
-    <div
-      class="course-container__courses left flex-row-reverse"
-      [ngClass]="{ active: activeCourse == course.title }"
-      (mouseenter)="activeCourse = course.title"
-      (mouseleave)="activeCourse = ''"
-    >
-      <figure
-        class="icon-container__courses"
-        [ngClass]="{ inactive: activeCourse !== course.title }"
-      >
-        <img
-          [src]="'assets/icons/' + course.icon"
-          [alt]="course.title"
-          [ngClass]="course.iconWidth"
-        />
-      </figure>
-      <div class="text-right relative">
-        <h3 class="text-lighter-purple">
-          {{ course.title }}
-        </h3>
-        <div class="flex items-center text-sm justify-between">
-          <button
-            class="link-button h-fit px-3"
-            (click)="goToLink(course.link)"
-            [ngClass]="{ inactive: activeCourse !== course.title }"
-          >
-            {{ "COURSES.BUTTON" | translate }}
-          </button>
-          <p class="text-light-purple">
-            {{ course.date | translate }}
-            <br />
-            {{ course.source }}
-          </p>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
-  <div class="courses-container__courses last text-left">
-    @for (course of courses.slice(9); track $index) {
-    <div
-      class="course-container__courses right"
-      [ngClass]="{ active: activeCourse == course.title }"
-      (mouseenter)="activeCourse = course.title"
-      (mouseleave)="activeCourse = ''"
-    >
-      <figure
-        class="icon-container__courses"
-        [ngClass]="{ inactive: activeCourse !== course.title }"
-      >
-        <img
-          [src]="'assets/icons/' + course.icon"
-          [alt]="course.title"
-          [ngClass]="course.iconWidth"
-        />
-      </figure>
-      <div>
-        <h3 class="text-lighter-purple">
-          {{ course.title }}
-        </h3>
-        <div class="flex items-center flex-row-reverse text-sm justify-between">
-          <button
-            class="link-button h-fit px-3"
-            (click)="goToLink(course.link)"
-            [ngClass]="{ inactive: activeCourse !== course.title }"
-          >
-            {{ "COURSES.BUTTON" | translate }}
-          </button>
-          <p class="text-light-purple text-left">
-            {{ course.date | translate }}
-            <br />
-            {{ course.source }}
-          </p>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
+  }
 </div>

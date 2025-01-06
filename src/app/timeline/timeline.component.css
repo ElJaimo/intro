@@ -47,6 +47,7 @@
   position: absolute;
   width: 50%;
   z-index: -5;
+  text-align: left;
   @apply rounded-l-2xl;
 }
 
@@ -66,16 +67,16 @@
 
 .courses-container__courses.last::before {
   border-color: var(--LIGHT-PURPLE);
-  border-width: 2px 0 0 2px;
+  border-width: 2px 2px 0 0;
   bottom: 0;
   content: "";
   display: block;
   height: calc(100% + 2px);
   position: absolute;
-  left: 0;
+  right: 0;
   width: 50%;
   z-index: -5;
-  @apply rounded-tl-2xl;
+  @apply rounded-tr-2xl;
 }
 
 .courses-container__courses.last::after {
@@ -86,9 +87,9 @@
   border-width: 2px;
   border-color: var(--LIGHT-PURPLE);
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  transform: translate(-44%, 98%);
+  transform: translate(39%, 98%);
   @apply text-4xl rounded-full;
 }
 
