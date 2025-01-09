@@ -106,6 +106,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     'Tailwind',
     'Python',
     'SQL',
+    'Scrum'
   ];
   experience = [
     {
