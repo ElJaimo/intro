@@ -38,11 +38,8 @@
           {{ course.title }}
         </h3>
         <div
-          class="flex items-center text-sm justify-between"
+          class="flex items-center text-sm justify-end sm:justify-between"
           [ngClass]="{ 'flex-row-reverse': outerIdx % 2 !== 0 }"
-          [class]="
-            activeCourse == course.title ? 'justify-between' : 'justify-end'
-          "
         >
           <button
             class="link-button h-fit px-3"
@@ -52,7 +49,7 @@
             {{ "COURSES.BUTTON" | translate }}
           </button>
           <p
-            class="text-light-purple"
+            class="text-light-purple hidden sm:inline"
             [ngClass]="{ 'text-left': outerIdx % 2 !== 0 }"
           >
             {{ course.date | translate }}

@@ -179,8 +179,11 @@
 .link-button {
   transition: scale 0.3s ease;
   scale: 1;
+  @apply my-2 sm:my-0;
 }
 
 .link-button.inactive {
   scale: 0;
+  max-height: 0;
+  @apply my-0;
 }
