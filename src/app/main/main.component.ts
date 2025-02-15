@@ -50,7 +50,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     document.getElementById('type-out-content')?.classList.add('typing');
     setTimeout(() => (this.letter = 'e'), 1350);
-    console.log()
     if (this.SkillsSection && window.innerWidth > 425) {
       this.intersectionObserverService.observe(
         this.SkillsSection.nativeElement
