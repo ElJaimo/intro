@@ -30,7 +30,10 @@
           [ngClass]="course.iconWidth"
         />
       </figure>
-      <div class="text-right relative">
+      <div
+        class="relative"
+        [class]="outerIdx % 2 == 0 ? 'text-right' : 'text-left'"
+      >
         <h3 class="text-lighter-purple">
           {{ course.title }}
         </h3>
