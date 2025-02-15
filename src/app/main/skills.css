@@ -1,7 +1,12 @@
 .section-container__skills {
   background-color: var(--MAIN-BG);
   overflow-y: hidden;
-  @apply max-h-0;
+}
+
+@media (min-width: 425px) {
+  .section-container__skills {
+    max-height: 0;
+  }
 }
 
 .section-container__skills.show-section {
