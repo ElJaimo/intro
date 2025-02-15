@@ -15,8 +15,7 @@
 
 body,
 html {
-  background-color: var(--SECONDARY-BG);/*  */
-  height: 100%;
+  background-color: var(--SECONDARY-BG);
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
 }
