@@ -19,7 +19,6 @@ html {
   height: 100%;
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
-  scroll-behavior: smooth;
 }
 
 h2 {
@@ -30,7 +29,6 @@ h2 {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  height: 100vh;
 }
 
 button.link-button {
