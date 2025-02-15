@@ -16,8 +16,10 @@
 body,
 html {
   background-color: var(--SECONDARY-BG);
+  height: 100%;
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
 }
 
 h2 {
