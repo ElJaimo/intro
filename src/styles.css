@@ -31,6 +31,7 @@ h2 {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   max-height: 100vh;
+  -webkit-overflow-scrolling: touch;
 }
 
 button.link-button {
