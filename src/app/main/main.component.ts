@@ -22,7 +22,6 @@ import { RouterLink, Router } from '@angular/router';
     NavbarComponent,
     TimelineComponent,
     TranslateModule,
-    RouterLink,
   ],
   styleUrls: [
     './main-hero.css',
@@ -98,6 +97,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     'Angular',
     'Vue.js',
     'React',
+    'AngularJS',
     'UI/UX',
     'AWS',
     'Git',
