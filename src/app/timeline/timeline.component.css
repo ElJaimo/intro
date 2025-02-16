@@ -127,7 +127,7 @@
   display: flex;
   height: 5.5rem;
   justify-content: center;
-  @apply min-w-16;
+  @apply w-20 min-w-20 sm:min-w-0;
 }
 
 @supports (animation-range: 0% cover 100%) {
