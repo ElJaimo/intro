@@ -102,6 +102,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     'AWS',
     'Git',
     'Figma',
+    'Canva',
     'Bootstrap',
     'Tailwind',
     'Python',

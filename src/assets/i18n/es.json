@@ -24,13 +24,13 @@
   },
   "ABOUT-ME": {
     "TITLE": "Un poco acerca de mí",
-    "CONTENT": "Soy un ingeniero en física y técnico variado que terminó trabajando como desarrollador web. Me encanta cocinar, dibujar y minecraft.",
+    "CONTENT": "Soy un ingeniero en física y técnico variado que terminó trabajando como desarrollador. Me encanta cocinar, dibujar y minecraft.",
     "RESUME": "Currículum"
   },
   "SKILLS": {
     "TITLE1": "Buscas un desarrollador?",
     "TITLE2": "Puedes haberlo encontrado",
-    "CONTENT1": "Actualmente estoy principalmente enfocado en frontend, pero estoy habituado a adaptarme a otras tareas como apoyar en backend y diseño.",
+    "CONTENT1": "Actualmente estoy principalmente enfocado en frontend, pero estoy habituado a adaptarme a otras tareas como backend, diseño e incluso documentación.",
     "CONTENT2": "Por lo tanto he aprendido herramientas mas allá de mi área principal."
   },
   "COURSES": {

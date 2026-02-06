@@ -24,13 +24,13 @@
   },
   "ABOUT-ME": {
     "TITLE": "A little about me",
-    "CONTENT": "I am a physics engineer and a varied technician who ended up working as web developer. I love cooking, drawing and minecraft.",
+    "CONTENT": "I am a physics engineer and a varied technician who ended up working as developer. I love cooking, drawing and minecraft.",
     "RESUME": "Resume"
   },
   "SKILLS": {
     "TITLE1": "Looking for a developer?",
     "TITLE2": "I might suit you",
-    "CONTENT1": "Currently I'm mainly focused in frontend stuff, but I'm used to adapt to another tasks and roles like backend and design assistance.",
+    "CONTENT1": "Currently I'm mainly focused in frontend stuff, but I'm used to adapt to another tasks and roles like backend, design and even documentation.",
     "CONTENT2": "Therefore I have learned tools beyond my main area."
   },
   "COURSES": {
