@@ -141,7 +141,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
       title: 'PROJECTS.MASONRY.TITLE',
       image: 'lsa-page.jpg',
       description: 'PROJECTS.MASONRY.DESCRIPTION',
-      link: 'https://www.lsa.sg/home',
+      link: 'https://www.lsa.sg/',
       type: 'company',
     },
     {
