@@ -33,7 +33,7 @@ import { RouterLink, Router } from '@angular/router';
   ],
 })
 export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
-  letter = 'o';
+  letter: string = 'o';
   @ViewChild('SkillsSection') SkillsSection: ElementRef | undefined;
 
   constructor(
