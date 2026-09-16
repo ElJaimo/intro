@@ -45,7 +45,8 @@
 }
 
 @keyframes glow {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1);
   }
 
@@ -125,16 +126,19 @@
   display: flex;
   justify-content: center;
   right: 0;
+  height: 24rem;
+  width: fit-content;
   overflow-x: hidden;
   position: absolute;
   top: 1rem;
-  transition: all 0.4s ease;
+  transition:
+    height 0.4s ease,
+    width 0.4s ease;
   z-index: 1;
-  @apply py-8 w-fit rounded-3xl;
+  @apply py-8 rounded-3xl;
 }
 
 .navbar-container-sm__inner.inactive {
-  justify-content: center;
   height: 6rem;
   width: 6rem;
 }
@@ -144,5 +148,5 @@
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  @apply gap-10 text-lg pl-7 pr-5;
+  @apply gap-10 text-lg pl-8 pr-5 pt-4;
 }

@@ -12,7 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw; 
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -62,8 +62,7 @@
 .experience-container__experience {
   display: grid;
   overflow-y: auto;
-  grid-template-columns: repeat(auto-fit, 14rem);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   max-height: 60vh;
   @apply mx-auto gap-5;
 }
@@ -99,7 +98,6 @@
 }
 
 .work-image {
-  height: 150px;
   position: relative;
   transition: filter 0.3s ease;
 }
