@@ -2,7 +2,8 @@
   margin: 0 2%;
   top: -1px;
   max-width: 1440px;
-  @apply sticky z-10 mx-auto hidden md:block;
+  z-index: 2;
+  @apply sticky mx-auto hidden md:block;
 }
 
 .navbar-container__inner {
@@ -34,13 +35,26 @@
 
 .icon-img__navbar {
   cursor: pointer;
-  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
-  @apply h-4/5 cursor-default brightness-125 hover:brightness-200;
+  transition: bottom 0.25s;
+  bottom: 0;
+  @apply h-full relative hover:bottom-0.5;
+}
+
+.icon-img__navbar.glowing {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(2);
+  }
 }
 
 @media (min-width: 768px) {
-
   .navbar-container__inner.inactive {
     width: 15%;
     min-width: 200px;
@@ -99,7 +113,8 @@
 .navbar-container-sm__outer {
   margin: 0 2%;
   top: -1px;
-  @apply sticky z-10 block md:hidden;
+  z-index: 2;
+  @apply sticky block md:hidden;
 }
 
 .navbar-container-sm__inner {
@@ -108,14 +123,13 @@
   background-color: rgba(230, 230, 230, 0.6);
   border: 1px rgb(200, 200, 200) solid;
   display: flex;
-  height: 19rem;
   justify-content: center;
   right: 0;
   overflow-x: hidden;
   position: absolute;
   top: 1rem;
   transition: all 0.4s ease;
-  z-index: 11;
+  z-index: 1;
   @apply py-8 w-fit rounded-3xl;
 }
 

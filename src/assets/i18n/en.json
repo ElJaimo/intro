@@ -11,6 +11,7 @@
   },
   "NAVBAR": {
     "LINKS": {
+      "INTRO": "Intro",
       "ABOUT": "About",
       "SKILLS": "Skills",
       "COURSES": "Courses",
