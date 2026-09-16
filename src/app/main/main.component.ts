@@ -31,8 +31,10 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   letter: string = 'o';
   isTop: boolean = true;
+  isObservingSkills: boolean = false;
 
-  @ViewChild('SkillsSection') SkillsSection: ElementRef | undefined;
+  @ViewChild('SkillsSection') SkillsSection?: ElementRef;
+  @ViewChild('CoursesSection') CoursesSection?: ElementRef;
 
   constructor(
     private intersectionObserverService: IntersectionObserverService,
@@ -48,17 +50,12 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     document.getElementById('type-out-content')?.classList.add('typing');
     setTimeout(() => (this.letter = 'e'), 1350);
-    if (this.SkillsSection && window.innerWidth > 425) {
-      this.intersectionObserverService.observe(
-        this.SkillsSection.nativeElement,
-      );
-    }
   }
 
   ngOnDestroy(): void {
-    if (this.SkillsSection) {
+    if (this.CoursesSection) {
       this.intersectionObserverService.unobserve(
-        this.SkillsSection.nativeElement,
+        this.CoursesSection.nativeElement,
       );
     }
   }
@@ -204,6 +201,18 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (show) {
       mainHero?.classList.add('show');
+      if (
+        !this.isObservingSkills &&
+        this.SkillsSection &&
+        this.CoursesSection &&
+        window.innerWidth > 425
+      ) {
+        this.intersectionObserverService.observe(
+          this.CoursesSection.nativeElement,
+          this.SkillsSection.nativeElement,
+        );
+        this.isObservingSkills = true;
+      }
     } else {
       mainHero?.classList.remove('show');
       this.router
