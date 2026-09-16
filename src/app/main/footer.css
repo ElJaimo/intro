@@ -7,9 +7,7 @@ footer {
   display: flex;
   max-width: 1440px;
   align-items: center;
-  height: 110px;
-  padding: 1rem;
-  @apply mx-auto justify-center md:justify-between;
+  @apply mx-auto px-4 justify-center md:justify-between py-10 md:py-4;
 }
 
 .network-icon__footer {
