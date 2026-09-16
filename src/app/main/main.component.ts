@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ElementRef,
   OnDestroy,
   ViewChild,
@@ -28,10 +27,11 @@ import { Router } from '@angular/router';
     'footer.css',
   ],
 })
-export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
+export class MainComponent implements AfterViewInit, OnDestroy {
   letter: string = 'o';
   isTop: boolean = true;
   isObservingSkills: boolean = false;
+  isHeroVisible: boolean = true;
 
   @ViewChild('SkillsSection') SkillsSection?: ElementRef;
   @ViewChild('CoursesSection') CoursesSection?: ElementRef;
@@ -44,8 +44,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
   }
-
-  ngOnInit() {}
 
   ngAfterViewInit(): void {
     document.getElementById('type-out-content')?.classList.add('typing');
@@ -168,22 +166,22 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @HostListener('wheel', ['$event'])
   onScroll(event: WheelEvent): void {
-    const content = document.getElementById('content');
-
-    if (!content) return;
-
-    if (event.deltaY > 0) {
+    if (this.isHeroVisible && event.deltaY > 0) {
       this.showContent(true);
     }
   }
 
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent): void {
+    if (!this.isHeroVisible) return;
+
     this.touchStartY = event.touches[0].clientY;
   }
 
   @HostListener('touchend', ['$event'])
   onTouchEnd(event: TouchEvent): void {
+    if (!this.isHeroVisible) return;
+
     const touchEndY = event.changedTouches[0].clientY;
 
     if (this.touchStartY - touchEndY > 50) {
@@ -199,18 +197,23 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   showContent(show: boolean) {
     const mainHero = document.getElementById('main-hero');
 
+    this.isHeroVisible = !show;
+
     if (show) {
       mainHero?.classList.add('show');
       if (
         !this.isObservingSkills &&
         this.SkillsSection &&
-        this.CoursesSection &&
-        window.innerWidth > 425
+        this.CoursesSection
       ) {
-        this.intersectionObserverService.observe(
-          this.CoursesSection.nativeElement,
-          this.SkillsSection.nativeElement,
-        );
+        if ('IntersectionObserver' in window) {
+          this.intersectionObserverService.observe(
+            this.CoursesSection.nativeElement,
+            this.SkillsSection.nativeElement,
+          );
+        } else {
+          this.SkillsSection.nativeElement.classList.add('show-section');
+        }
         this.isObservingSkills = true;
       }
     } else {
@@ -230,7 +233,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
   downloadPDF(): void {
     let pdfName = '';
-    if (this.translate.currentLang == 'en') {
+    if (this.translate.currentLang === 'en') {
       pdfName = 'Curriculum-Vitae-EN.pdf';
     } else if (this.translate.currentLang == 'es') {
       pdfName = 'Curriculum-Vitae-ES.pdf';
@@ -250,7 +253,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
   hoveringWork(image: string) {
     let imageId = document.getElementById(image)!;
-    if (imageId.classList.contains('hovering') == true) {
+    if (imageId.classList.contains('hovering')) {
       imageId.classList.remove('hovering');
     } else {
       imageId.classList.add('hovering');
@@ -258,10 +261,10 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   sortExperience(expArray: any[]) {
-    if (this.sortBy == 'all') {
+    if (this.sortBy === 'all') {
       return expArray;
     } else {
-      return expArray.filter((item) => item.type == this.sortBy);
+      return expArray.filter((item) => item.type === this.sortBy);
     }
   }
 }
