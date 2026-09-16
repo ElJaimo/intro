@@ -23,7 +23,11 @@ html {
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-xl md:text-2xl;
+}
+
+p.text-content {
+  @apply text-sm md:text-base
 }
 
 .main-container {
