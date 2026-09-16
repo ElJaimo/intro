@@ -4,26 +4,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class IntersectionObserverService {
-  private observer: IntersectionObserver;
+  private observer?: IntersectionObserver;
 
-  constructor() {
+  observe(element: Element, target: Element) {
     this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show-section');
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          target.classList.add('show-section');
+        }
       },
-      { threshold: 0.5 }
+      {
+        threshold: 0.1,
+      },
     );
-  }
 
-  observe(element: Element) {
     this.observer.observe(element);
   }
 
   unobserve(element: Element) {
-    this.observer.unobserve(element);
+    this.observer?.unobserve(element);
   }
 }

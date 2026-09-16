@@ -1,12 +1,12 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { RouterLink, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgClass, RouterLink, TranslateModule],
+  imports: [NgClass, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
@@ -18,6 +18,9 @@ export class NavbarComponent implements OnInit {
   enLang = true;
 
   @Output() lang = new EventEmitter<boolean>();
+  @Output() showContent = new EventEmitter<boolean>();
+
+  @Input() isTop = true;
 
   constructor(private router: Router) {}
 
@@ -31,7 +34,7 @@ export class NavbarComponent implements OnInit {
           this.lockNavbar = true;
         }
       },
-      { threshold: [1] }
+      { threshold: [1] },
     );
     observer.observe(navbar);
   }
@@ -50,7 +53,7 @@ export class NavbarComponent implements OnInit {
       });
   }
 
-  ChangeLang() {
+  changeLang() {
     this.enLang = !this.enLang;
     this.lang.emit(this.enLang);
   }

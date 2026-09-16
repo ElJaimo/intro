@@ -5,15 +5,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100vw;
+  z-index: 3;
+  transition: bottom 0.4s ease-in-out;
+  @apply fixed bottom-0;
+}
+
+.section-container__main.show {
+    bottom: 100%;
 }
 
 @media (min-width: 425px) {
   .section-container__main {
     background-image: url(../../assets/images/backgrounds/background-1-tablet.webp);
   }
+
   .intro-hero__main {
     left: 60%;
     top: 45%;
@@ -75,15 +81,19 @@
   0% {
     width: 0%;
   }
+
   40% {
     width: 100%;
   }
+
   50% {
     width: 50%;
   }
+
   70% {
     width: 50%;
   }
+
   100% {
     width: 100%;
   }
@@ -93,6 +103,7 @@
   from {
     background-color: transparent;
   }
+
   to {
     background-color: var(--BASE-PURPLE);
   }
@@ -107,7 +118,6 @@
 }
 
 .scroll-button__main {
-  -ms-transform: translate(-50%, -50%);
   align-items: center;
   background-color: white;
   bottom: 0.5rem;
@@ -117,21 +127,29 @@
   left: 50%;
   opacity: 0.4;
   position: absolute;
-  transform: translate(-50%, -50%);
-  transition: all 0.25s;
-  @apply rounded-full w-12 h-12 hover:bottom-3;
+  animation: bounce 2s infinite;
+  @apply rounded-full w-12 h-12;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -25%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: translate(-50%, 0);
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
 }
 
 .network-icon__main {
   cursor: pointer;
   transition: all 0.5s ease;
-  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg)
-    brightness(89%) contrast(91%);
+  filter: invert(59%) sepia(33%) saturate(398%) hue-rotate(224deg) brightness(89%) contrast(91%);
   @apply scale-110 md:scale-100;
 }
 
 .network-icon__main:hover,
 .network-icon__main:focus {
-  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg)
-    brightness(89%) contrast(69%);
+  filter: invert(86%) sepia(5%) saturate(6101%) hue-rotate(206deg) brightness(89%) contrast(69%);
 }

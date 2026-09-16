@@ -8,10 +8,16 @@
     class="navbar-container__inner"
     [ngClass]="{
       inactive: !(lockNavbar || hoverNavbar || pinNavbar),
-      pinned: pinNavbar || lockNavbar
+      pinned: pinNavbar || lockNavbar,
     }"
   >
-    <img src="assets/logos/jaimos-logo.png" alt="" class="icon-img__navbar" />
+    <img
+      (click)="showContent.emit(false)"
+      src="assets/logos/jaimos-logo.png"
+      alt=""
+      class="icon-img__navbar"
+      [class.glowing]="isTop"
+    />
     <div
       class="gap-x-4"
       [ngClass]="!(lockNavbar || hoverNavbar || pinNavbar) ? 'hidden' : 'flex'"
@@ -33,7 +39,7 @@
       <p
         class="material-symbols-outlined utility-btn__navbar"
         [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
-        (click)="ChangeLang()"
+        (click)="changeLang()"
       >
         translate
       </p>
@@ -60,7 +66,7 @@
 </nav>
 <div
   [ngClass]="openNavbar ? 'block' : 'hidden'"
-  class="absolute bg-black opacity-50 w-screen h-screen top-0 z-10 block md:hidden"
+  class="absolute bg-black opacity-50 w-screen h-screen top-0 z-[1] block md:hidden"
   (click)="openNavbar = false"
   (wheel)="openNavbar = false"
 ></div>
@@ -72,34 +78,39 @@
     }"
   >
     @if (openNavbar) {
-    <div class="nav-links-sm">
-      <a class="nav-link__navbar" (click)="navigateToSection('about-me')">{{
-        "NAVBAR.LINKS.ABOUT" | translate
-      }}</a>
-      <a class="nav-link__navbar" (click)="navigateToSection('skills')">{{
-        "NAVBAR.LINKS.SKILLS" | translate
-      }}</a>
-      <a class="nav-link__navbar" (click)="navigateToSection('courses')">{{
-        "NAVBAR.LINKS.COURSES" | translate
-      }}</a>
-      <a class="nav-link__navbar" (click)="navigateToSection('projects')">{{
-        "NAVBAR.LINKS.PROJECTS" | translate
-      }}</a>
-      <p
-        class="material-symbols-outlined utility-btn__navbar absolute left-4 top-0"
-        [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
-        (click)="ChangeLang()"
-      >
-        translate
-      </p>
-    </div>
+      <div class="nav-links-sm">
+        <a
+          class="nav-link__navbar"
+          (click)="showContent.emit(false); openNavbar = false"
+          >{{ "NAVBAR.LINKS.INTRO" | translate }}</a
+        >
+        <a class="nav-link__navbar" (click)="navigateToSection('about-me')">{{
+          "NAVBAR.LINKS.ABOUT" | translate
+        }}</a>
+        <a class="nav-link__navbar" (click)="navigateToSection('skills')">{{
+          "NAVBAR.LINKS.SKILLS" | translate
+        }}</a>
+        <a class="nav-link__navbar" (click)="navigateToSection('courses')">{{
+          "NAVBAR.LINKS.COURSES" | translate
+        }}</a>
+        <a class="nav-link__navbar" (click)="navigateToSection('projects')">{{
+          "NAVBAR.LINKS.PROJECTS" | translate
+        }}</a>
+        <p
+          class="material-symbols-outlined utility-btn__navbar absolute left-4 top-0"
+          [title]="'NAVBAR.ICONS.TRANSLATE' | translate"
+          (click)="changeLang()"
+        >
+          translate
+        </p>
+      </div>
     } @else {
-    <p
-      class="material-symbols-outlined text-4xl text-darker-purple"
-      (click)="openNavbar = true"
-    >
-      add
-    </p>
+      <p
+        class="material-symbols-outlined text-4xl text-darker-purple"
+        (click)="openNavbar = true"
+      >
+        add
+      </p>
     }
   </div>
 </nav>

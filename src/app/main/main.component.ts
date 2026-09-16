@@ -11,18 +11,14 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { IntersectionObserverService } from '../intersection-observer.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { RouterLink, Router } from '@angular/router';
+import { HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   standalone: true,
-  imports: [
-    NgClass,
-    NavbarComponent,
-    TimelineComponent,
-    TranslateModule,
-  ],
+  imports: [NgClass, NavbarComponent, TimelineComponent, TranslateModule],
   styleUrls: [
     './main-hero.css',
     'about-me.css',
@@ -34,12 +30,16 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   letter: string = 'o';
-  @ViewChild('SkillsSection') SkillsSection: ElementRef | undefined;
+  isTop: boolean = true;
+  isObservingSkills: boolean = false;
+
+  @ViewChild('SkillsSection') SkillsSection?: ElementRef;
+  @ViewChild('CoursesSection') CoursesSection?: ElementRef;
 
   constructor(
     private intersectionObserverService: IntersectionObserverService,
     private translate: TranslateService,
-    private router: Router
+    private router: Router,
   ) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
@@ -50,17 +50,12 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     document.getElementById('type-out-content')?.classList.add('typing');
     setTimeout(() => (this.letter = 'e'), 1350);
-    if (this.SkillsSection && window.innerWidth > 425) {
-      this.intersectionObserverService.observe(
-        this.SkillsSection.nativeElement
-      );
-    }
   }
 
   ngOnDestroy(): void {
-    if (this.SkillsSection) {
+    if (this.CoursesSection) {
       this.intersectionObserverService.unobserve(
-        this.SkillsSection.nativeElement
+        this.CoursesSection.nativeElement,
       );
     }
   }
@@ -107,7 +102,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     'Tailwind',
     'Python',
     'SQL',
-    'Scrum'
+    'Scrum',
   ];
   experience = [
     {
@@ -169,17 +164,68 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  navigateToSection(section: string) {
-    this.router
-      .navigate([], {
-        fragment: section,
-      })
-      .then(() => {
-        const element = document.getElementById(section);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+  private touchStartY = 0;
+
+  @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent): void {
+    const content = document.getElementById('content');
+
+    if (!content) return;
+
+    if (event.deltaY > 0) {
+      this.showContent(true);
+    }
+  }
+
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent): void {
+    this.touchStartY = event.touches[0].clientY;
+  }
+
+  @HostListener('touchend', ['$event'])
+  onTouchEnd(event: TouchEvent): void {
+    const touchEndY = event.changedTouches[0].clientY;
+
+    if (this.touchStartY - touchEndY > 50) {
+      this.showContent(true);
+    }
+  }
+
+  onContentScroll(event: Event) {
+    const content = event.target as HTMLElement;
+    this.isTop = content.scrollTop === 0;
+  }
+
+  showContent(show: boolean) {
+    const mainHero = document.getElementById('main-hero');
+
+    if (show) {
+      mainHero?.classList.add('show');
+      if (
+        !this.isObservingSkills &&
+        this.SkillsSection &&
+        this.CoursesSection &&
+        window.innerWidth > 425
+      ) {
+        this.intersectionObserverService.observe(
+          this.CoursesSection.nativeElement,
+          this.SkillsSection.nativeElement,
+        );
+        this.isObservingSkills = true;
+      }
+    } else {
+      mainHero?.classList.remove('show');
+      this.router
+        .navigate([], {
+          fragment: 'content',
+        })
+        .then(() => {
+          const element = document.getElementById('content');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+    }
   }
 
   downloadPDF(): void {
