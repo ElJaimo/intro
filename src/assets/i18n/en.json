@@ -47,12 +47,13 @@
       "SEP2024": "Sep, 2024",
       "OCT2024": "Oct, 2024",
       "DEC2024": "Dec, 2024",
-      "JAN2025": "Jan, 2025"
+      "JAN2025": "Jan, 2025",
+      "OCT2026": "Oct, 2026"
     }
   },
   "PROJECTS": {
-    "TITLE1": "The work,",
-    "TITLE2": "The projects",
+    "TITLE1": "Check the work,",
+    "TITLE2": "the projects",
     "DESCRIPTION": "Teamwork is fundamental not only for the workplace, so throughout my career I have constantly collaborated with my colleagues for the development of projects as well as my own skills.",
     "ORDER": {
       "LABEL": "Sort by:",
