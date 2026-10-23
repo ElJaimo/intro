@@ -40,14 +40,6 @@ export class TimelineComponent implements OnInit {
       link: 'https://coursera.org/share/21c7cd66ae1b68105f8005f694d91c77',
     },
     {
-      title: 'Designing User Interfaces and Experiences (UI/UX)',
-      date: 'COURSES.DATES.MAY2024',
-      source: 'IBM',
-      icon: 'uiux-icon.png',
-      iconWidth: 'w-12',
-      link: 'https://coursera.org/share/70392a53f661e269e351483be02ae606',
-    },
-    {
       title: 'Developing Websites and Front-Ends with Bootstrap',
       date: 'COURSES.DATES.JUN2024',
       source: 'IBM',
@@ -103,6 +95,23 @@ export class TimelineComponent implements OnInit {
       icon: 'research-icon.png',
       iconWidth: 'w-16',
       link: 'https://coursera.org/share/1268f807379489bf6c27590b7e797d3e',
+    },
+    {
+      title: 'Build Dynamic User Interfaces (UI) for Websites',
+      date: 'COURSES.DATES.OCT2026',
+      source: 'Google',
+      icon: 'ui-icon.png',
+      iconWidth: 'w-12',
+      link: 'https://coursera.org/share/925094eeda4102cc2021a91b5b100bf7',
+    },
+    {
+      title: 'Google UX Design Professional Certificate',
+      date: 'COURSES.DATES.OCT2026',
+      source: 'Google',
+      icon: 'ux-icon.png',
+      iconWidth: 'w-16',
+      link: 'https://www.credly.com/badges/168c7085-082d-46fe-98f1-a809dc424e36/public_url',
+      professional: true,
     },
   ];
 
