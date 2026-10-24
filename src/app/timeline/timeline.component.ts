@@ -105,7 +105,7 @@ export class TimelineComponent implements OnInit {
       link: 'https://coursera.org/share/925094eeda4102cc2021a91b5b100bf7',
     },
     {
-      title: 'Google UX Design Professional Certificate',
+      title: 'Google UX Design',
       date: 'COURSES.DATES.OCT2026',
       source: 'Google',
       icon: 'ux-icon.png',
